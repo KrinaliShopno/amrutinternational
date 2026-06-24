@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Catalogue - Amrut International</title>
+    <meta name="description" content="Browse our catalogue of Ayurvedic wellness supplements, herbal shampoos and cosmetics, anion chip sanitary napkins, surgical masks, and alkaline water ionizers.">
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         TOP BAR
+         ========================================== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</span>
+                <span class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</span>
+            </div>
+            <div class="top-bar-right">
+                <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</span>
+                <div class="top-bar-social">
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         HEADER / NAVIGATION
+         ========================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 450 100" style="height: 50px;">
+                    <path d="M40,10 C65,10 70,45 40,80 C10,45 15,10 40,10 Z" fill="#2E524A" />
+                    <path d="M40,20 C55,20 58,40 40,70 C22,40 25,20 40,20 Z" fill="#05cc47" />
+                    <path d="M40,10 L40,80" stroke="#ffffff" stroke-width="1.5" />
+                    <text x="90" y="48" font-family="'Young Serif', serif" font-size="34" fill="#2E524A">AMRUT</text>
+                    <text x="90" y="78" font-family="'Poppins', sans-serif" font-size="18" fill="#666666" letter-spacing="4">INTERNATIONAL</text>
+                </svg>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Our Company <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="about-us.html">About Us</a></li>
+                            <li class="dropdown-item"><a href="our-history.html">Our History</a></li>
+                            <li class="dropdown-item"><a href="certificates.html">Certificates</a></li>
+                            <li class="dropdown-item"><a href="faqs.html">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <button class="header-icon-btn" onclick="location.href='products.html'" title="Search Products"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="header-icon-btn" title="My Account"><i class="fa-regular fa-user"></i></button>
+                <button class="mobile-menu-btn" title="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         BREADCRUMB HERO
+         ========================================== -->
+    <div class="breadcrumb-hero" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200');">
+        <div class="container">
+            <h1>Products Catalogue</h1>
+            <div class="breadcrumb-list">
+                <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-item active" style="color: white;">Products</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         SHOP LAYOUT SECTION
+         ========================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Sidebar filters -->
+                <aside class="shop-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul>
+                            <li class="category-list-item active" data-category="all">
+                                <a href="#" class="category-link category-filter-item" data-category="all">
+                                    <span>All Products</span>
+                                    <span class="category-count">16</span>
+                                </a>
+                            </li>
+                            <li class="category-list-item" data-category="health">
+                                <a href="#" class="category-link category-filter-item" data-category="health">
+                                    <span>Health & Nutraceutical</span>
+                                    <span class="category-count">4</span>
+                                </a>
+                            </li>
+                            <li class="category-list-item" data-category="cosmetics">
+                                <a href="#" class="category-link category-filter-item" data-category="cosmetics">
+                                    <span>Herbal Cosmetics</span>
+                                    <span class="category-count">7</span>
+                                </a>
+                            </li>
+                            <li class="category-list-item" data-category="sanitary">
+                                <a href="#" class="category-link category-filter-item" data-category="sanitary">
+                                    <span>Sanitary Pads</span>
+                                    <span class="category-count">2</span>
+                                </a>
+                            </li>
+                            <li class="category-list-item" data-category="surgical">
+                                <a href="#" class="category-link category-filter-item" data-category="surgical">
+                                    <span>Surgical Products</span>
+                                    <span class="category-count">2</span>
+                                </a>
+                            </li>
+                            <li class="category-list-item" data-category="water">
+                                <a href="#" class="category-link category-filter-item" data-category="water">
+                                    <span>Water Care</span>
+                                    <span class="category-count">1</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Wholesale Inquiry</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.6;">Interested in launching a private label or placing bulk supply cargo exports? Connect with us directly.</p>
+                        <a href="https://wa.me/919879063240" target="_blank" class="btn btn-whatsapp" style="width: 100%; font-size: 0.85rem; padding: 0.6rem 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                            <i class="fa-brands fa-whatsapp"></i> Chat with Export Head
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Main shop panel -->
+                <main class="shop-main">
+                    <!-- Toolbar search/sort -->
+                    <div class="shop-toolbar">
+                        <div style="font-size: 0.9rem; color: var(--text-muted);">
+                            Showing products range available for global distribution
+                        </div>
+                        <div class="search-box">
+                            <input type="text" id="search-products" class="search-input" placeholder="Search products...">
+                            <button id="search-btn" class="search-icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="products-container">
+                        <!-- Filled dynamically by main.js -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER SECTION
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Amrut International</h3>
+                    <p>Established in the year 2017 in Surat, Gujarat, Amrut International has become a world-renowned exporter and supplier of Ayurvedic preparations, premium beauty cosmetics, and personal hygiene products.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> About Us</a></li>
+                        <li><a href="our-history.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Our History</a></li>
+                        <li><a href="certificates.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Certificates</a></li>
+                        <li><a href="products.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Our Products</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Downloads</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="https://amrutinternational.net/wp-content/uploads/2022/04/Sanitary-Napkin-All-Photos-1.pdf" target="_blank"><i class="fa-regular fa-file-pdf"></i> Sanitary Pads Catalog</a></li>
+                        <li><a href="https://amrutinternational.net/wp-content/uploads/2022/04/Amrut-Jal_Catalogue.pdf" target="_blank"><i class="fa-regular fa-file-pdf"></i> Water Care Catalog</a></li>
+                        <li><a href="faqs.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Help & FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>106, Apple Square, Nr. Yogi Chowk, Punagam, Surat - 395010, Gujarat, India.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 98790 63240<br>+91 99242 31091</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>amrutinternational2017@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Amrut International. All Rights Reserved. Designed by SHOPNO ECOMMERCE PVT LTD.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         FLOATING WHATSAPP CHAT WIDGET
+         ========================================== -->
+    <div class="whatsapp-widget">
+        <button class="whatsapp-trigger-btn" title="Chat with us on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+        <div class="whatsapp-box">
+            <div class="whatsapp-box-header">
+                <i class="fa-brands fa-whatsapp" style="font-size: 2.2rem; color: #25d366;"></i>
+                <div>
+                    <h3>Start a Conversation</h3>
+                    <p>Typically replies in minutes</p>
+                </div>
+            </div>
+            <div class="whatsapp-box-body">
+                <a href="https://wa.me/919924231091" target="_blank" class="whatsapp-agent-card">
+                    <div class="whatsapp-agent-info">
+                        <div class="whatsapp-agent-avatar">TS</div>
+                        <div class="whatsapp-agent-details">
+                            <h4>Team Sales</h4>
+                            <p>Domestic Inquiries</p>
+                        </div>
+                    </div>
+                    <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
+                </a>
+                <a href="https://wa.me/919879063240" target="_blank" class="whatsapp-agent-card">
+                    <div class="whatsapp-agent-info">
+                        <div class="whatsapp-agent-avatar">EH</div>
+                        <div class="whatsapp-agent-details">
+                            <h4>Export Head</h4>
+                            <p>International Business</p>
+                        </div>
+                    </div>
+                    <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PRODUCT DETAIL MODAL CONTAINER
+         ========================================== -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-container">
+            <button class="modal-close-btn" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-content-inner" id="modal-product-details">
+                <!-- Filled dynamically by main.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
