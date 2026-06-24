@@ -135,7 +135,7 @@ button, input, textarea, select {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: var(--accent-color);
+    background-color: var(--primary-colo);
     margin: 1.5rem auto 0;
     border-radius: 2px;
 }
@@ -307,7 +307,7 @@ button, input, textarea, select {
 }
 
 .nav-link:hover, .nav-item.active > .nav-link {
-    color: var(--accent-color);
+    color: var(--primary-colo);
 }
 
 .nav-link::after {
@@ -317,7 +317,7 @@ button, input, textarea, select {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--accent-color);
+    background-color: var(--primary-colo);
     transition: var(--transition-fast);
 }
 
@@ -379,7 +379,7 @@ button, input, textarea, select {
 }
 
 .header-icon-btn:hover {
-    color: var(--accent-color);
+    color: var(--primary-colo);
 }
 
 .mobile-menu-btn {
@@ -596,7 +596,7 @@ button, input, textarea, select {
 }
 
 .about-brief-list-item i {
-    color: var(--accent-color);
+    color: var(--primary-colo);
     font-size: 1.25rem;
     margin-top: 0.2rem;
 }
@@ -631,7 +631,7 @@ button, input, textarea, select {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background-color: var(--accent-color);
+    background-color: var(--primary-colo);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 50px;
@@ -802,7 +802,7 @@ button, input, textarea, select {
     height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    color: var(--accent-color);
+    color: var(--primary-colo);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -959,7 +959,7 @@ button, input, textarea, select {
 
 .blog-category {
     font-size: 0.75rem;
-    color: var(--accent-color);
+    color: var(--primary-colo);
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -973,7 +973,7 @@ button, input, textarea, select {
 }
 
 .blog-title a:hover {
-    color: var(--accent-color);
+    color: var(--primary-colo);
 }
 
 .blog-excerpt {
@@ -996,7 +996,7 @@ button, input, textarea, select {
 }
 
 .blog-read-more:hover {
-    color: var(--accent-color);
+    color: var(--primary-colo);
 }
 
 /* ==========================================================================
@@ -1100,7 +1100,7 @@ button, input, textarea, select {
 }
 
 .faq-card.active .faq-icon {
-    background-color: var(--accent-color);
+    background-color: var(--primary-colo);
     color: white;
     transform: rotate(45deg);
 }
@@ -1155,7 +1155,7 @@ button, input, textarea, select {
     height: 20px;
     right: -10px;
     background-color: white;
-    border: 4px solid var(--accent-color);
+    border: 4px solid var(--primary-colo);
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -1177,7 +1177,7 @@ button, input, textarea, select {
 .timeline-badge {
     display: inline-block;
     padding: 0.25rem 1rem;
-    background-color: var(--accent-color);
+    background-color: var(--primary-colo);
     color: white;
     border-radius: 50px;
     font-weight: 700;
@@ -1309,7 +1309,7 @@ button, input, textarea, select {
 }
 
 .team-social-link:hover {
-    color: var(--accent-color);
+    color: var(--primary-colo);
 }
 
 .team-info {
@@ -1485,7 +1485,7 @@ button, input, textarea, select {
 }
 
 .category-link:hover, .category-list-item.active .category-link {
-    color: var(--accent-color);
+    color: var(--primary-colo);
     padding-left: 0.25rem;
 }
 
@@ -1639,7 +1639,7 @@ button, input, textarea, select {
 
 .modal-product-category {
     font-size: 0.8rem;
-    color: var(--accent-color);
+    color: var(--primary-colo);
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -1682,7 +1682,7 @@ button, input, textarea, select {
     color: rgba(255, 255, 255, 0.7);
     padding: 5rem 0 2rem;
     font-size: 0.9rem;
-    border-top: 3px solid var(--accent-color);
+    border-top: 3px solid var(--primary-colo);
 }
 
 .footer h3 {
@@ -1702,7 +1702,7 @@ button, input, textarea, select {
     left: 0;
     width: 35px;
     height: 2px;
-    background-color: var(--accent-color);
+    background-color: var(--primary-colo);
 }
 
 .footer-grid {
@@ -1735,7 +1735,7 @@ button, input, textarea, select {
 }
 
 .footer-social-icon:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-colo);
     transform: translateY(-3px);
 }
 
@@ -1762,7 +1762,7 @@ button, input, textarea, select {
 }
 
 .footer-contact-list i {
-    color: var(--accent-color);
+    color: var(--primary-colo);
     font-size: 1.1rem;
     margin-top: 0.2rem;
 }
@@ -1788,7 +1788,7 @@ button, input, textarea, select {
 }
 
 .newsletter-input:focus {
-    border-color: var(--accent-color);
+    border-color: var(--primary-colo);
     background-color: rgba(255, 255, 255, 0.12);
 }
 
