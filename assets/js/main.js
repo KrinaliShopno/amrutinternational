@@ -511,4 +511,101 @@ document.addEventListener('DOMContentLoaded', function() {
         const url = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(text)}`;
         window.open(url, '_blank');
     }
+
+    // ==========================================
+    // EXPERIENCE PRODUCT SLIDER
+    // ==========================================
+    const expSlider = document.getElementById('exp-slider');
+    const expPrevBtn = document.getElementById('exp-prev-btn');
+    const expNextBtn = document.getElementById('exp-next-btn');
+
+    if (expSlider && expPrevBtn && expNextBtn) {
+        let currentIndex = 0;
+        const cards = expSlider.querySelectorAll('.experience-card');
+        const totalCards = cards.length;
+
+        function getVisibleCards() {
+            const width = window.innerWidth;
+            if (width > 1024) return 3;
+            if (width > 768) return 2;
+            return 1;
+        }
+
+        function updateSlider() {
+            const visible = getVisibleCards();
+            const maxIndex = Math.max(0, totalCards - visible);
+            
+            // Adjust current index if it exceeds the new bounds
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+
+            if (cards.length > 0) {
+                const cardWidth = cards[0].getBoundingClientRect().width;
+                const computedGap = parseFloat(window.getComputedStyle(expSlider).gap) || 32;
+                const offset = currentIndex * (cardWidth + computedGap);
+                expSlider.style.transform = `translateX(-${offset}px)`;
+            }
+
+            // Enable/disable buttons
+            expPrevBtn.disabled = currentIndex === 0;
+            expNextBtn.disabled = currentIndex >= maxIndex;
+            
+            // Hide buttons if all cards are visible
+            if (maxIndex === 0) {
+                expPrevBtn.style.visibility = 'hidden';
+                expNextBtn.style.visibility = 'hidden';
+            } else {
+                expPrevBtn.style.visibility = 'visible';
+                expNextBtn.style.visibility = 'visible';
+            }
+        }
+
+        expPrevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+
+        expNextBtn.addEventListener('click', () => {
+            const visible = getVisibleCards();
+            const maxIndex = totalCards - visible;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+
+        // Touch Swipe Support
+        let startX = 0;
+        let endX = 0;
+
+        expSlider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        expSlider.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            const threshold = 50;
+            const diff = startX - endX;
+
+            const visible = getVisibleCards();
+            const maxIndex = totalCards - visible;
+
+            if (diff > threshold && currentIndex < maxIndex) {
+                currentIndex++;
+                updateSlider();
+            } else if (diff < -threshold && currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        }, { passive: true });
+
+        // Initialize and listen to resize
+        window.addEventListener('resize', updateSlider);
+        
+        // Wait slightly for layout initialization
+        setTimeout(updateSlider, 200);
+    }
 });
