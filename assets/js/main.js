@@ -173,7 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
             category: "cosmetics",
             categoryLabel: "Herbal Cosmetics",
             price: "₹399.00",
-            image: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=400",
+            image: "assets/images/product_onion_shampoo_render.png",
+            hoverImage: "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=400",
             description: "Infused with Red Onion Extract, Black Seed Oil, and Vitamin E. Gently cleanses hair and scalp without drying, helps strengthen hair follicles, reduces hair fall, and encourages healthy growth. Free from harsh sulphates, parabens, and mineral oils.",
             tag: "new"
         },
@@ -183,7 +184,8 @@ document.addEventListener('DOMContentLoaded', function() {
             category: "cosmetics",
             categoryLabel: "Herbal Cosmetics",
             price: "₹299.00",
-            image: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=400",
+            image: "assets/images/product_onion_oil_render.png",
+            hoverImage: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=400",
             description: "A nourishing blend of Red Onion oil, Almond oil, Castor oil, Jojoba oil, and Coconut oil. Provides deep conditioning, reduces hair thinning, controls dandruff, and restores silky luster and volume to dry, damaged hair.",
             tag: "new"
         },
@@ -193,7 +195,8 @@ document.addEventListener('DOMContentLoaded', function() {
             category: "cosmetics",
             categoryLabel: "Herbal Cosmetics",
             price: "₹450.00",
-            image: "https://images.unsplash.com/photo-1519735797-402baa75a794?auto=format&fit=crop&q=80&w=400",
+            image: "assets/images/product_keratin_shampoo_render.png",
+            hoverImage: "https://images.unsplash.com/photo-1519735797-402baa75a794?auto=format&fit=crop&q=80&w=400",
             description: "Formulated with Hydrolyzed Keratin and nourishing oils to repair colored or heat-styled hair. Smoothens dry hair cuticles, locks in moisture, and eliminates frizz, leaving your hair looking naturally straight and shiny.",
             tag: "new"
         },
@@ -203,7 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
             category: "cosmetics",
             categoryLabel: "Herbal Cosmetics",
             price: "₹490.00",
-            image: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80&w=400",
+            image: "assets/images/product_keratin_conditioner_render.png",
+            hoverImage: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80&w=400",
             description: "Enriched with Morocco Argan Oil and Keratin proteins. Provides intense moisture therapy to dry, lifeless hair. Detangles, reduces hair breakage, and keeps locks smooth and bouncy all day long.",
             tag: "popular"
         },
@@ -323,10 +327,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const tagHTML = product.tag ? `<span class="product-tag">${product.tag}</span>` : '';
             
+            const primaryClass = product.hoverImage ? 'product-image primary-image' : 'product-image';
+            const hoverImgHTML = product.hoverImage 
+                ? `<img src="${product.hoverImage}" alt="${product.title} Hover" class="product-image hover-image" onerror="this.style.display='none'">` 
+                : '';
+            
             card.innerHTML = `
                 ${tagHTML}
                 <div class="product-image-container">
-                    <img src="${product.image}" alt="${product.title}" class="product-image" onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=${encodeURIComponent(product.title)}'">
+                    <img src="${product.image}" alt="${product.title}" class="${primaryClass}" onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=${encodeURIComponent(product.title)}'">
+                    ${hoverImgHTML}
                     <div class="product-actions-overlay">
                         <button class="product-action-btn view-details" data-id="${product.id}" title="Quick View">
                             <i class="fa-regular fa-eye"></i>
@@ -608,4 +618,167 @@ document.addEventListener('DOMContentLoaded', function() {
         // Wait slightly for layout initialization
         setTimeout(updateSlider, 200);
     }
+
+    // ==========================================
+    // STAT COUNTERS COUNT-UP ANIMATION
+    // ==========================================
+    const statsSection = document.querySelector('.about-stats-container');
+    const statNumbers = document.querySelectorAll('.about-stat-number');
+    
+    if (statsSection && statNumbers.length > 0) {
+        let animated = false;
+        
+        const countUp = () => {
+            statNumbers.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                if (isNaN(target)) return;
+                
+                counter.textContent = '0+';
+                const duration = 1500; // 1.5 seconds animation
+                const startTime = performance.now();
+                
+                const updateCount = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Ease out quadratic
+                    const easeProgress = progress * (2 - progress);
+                    const current = Math.floor(easeProgress * target);
+                    
+                    counter.textContent = current + '+';
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.textContent = target + '+';
+                    }
+                };
+                
+                requestAnimationFrame(updateCount);
+            });
+        };
+
+        // Use IntersectionObserver to start counting when section enters viewport
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !animated) {
+                        countUp();
+                        animated = true;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            
+            observer.observe(statsSection);
+        } else {
+            // Fallback for older browsers
+            countUp();
+        }
+    }
+
+    // ==========================================
+    // HERO BANNER CAROUSEL
+    // ==========================================
+    const heroSlides = document.querySelectorAll('.hero-carousel .carousel-slide');
+    const heroPrevBtn = document.getElementById('hero-prev-btn');
+    const heroNextBtn = document.getElementById('hero-next-btn');
+    const heroDots = document.querySelectorAll('.hero-carousel .carousel-dot');
+    
+    if (heroSlides.length > 0) {
+        let heroIndex = 0;
+        let heroInterval;
+        const autoPlayDelay = 5000; // 5 seconds
+        
+        function showSlide(index) {
+            // Remove active classes
+            heroSlides.forEach(slide => slide.classList.remove('active'));
+            heroDots.forEach(dot => dot.classList.remove('active'));
+            
+            // Set new active slide and dot
+            heroIndex = index;
+            if (heroIndex >= heroSlides.length) heroIndex = 0;
+            if (heroIndex < 0) heroIndex = heroSlides.length - 1;
+            
+            heroSlides[heroIndex].classList.add('active');
+            if (heroDots[heroIndex]) {
+                heroDots[heroIndex].classList.add('active');
+            }
+        }
+        
+        function nextSlide() {
+            showSlide(heroIndex + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(heroIndex - 1);
+        }
+        
+        function startAutoPlay() {
+            stopAutoPlay();
+            heroInterval = setInterval(nextSlide, autoPlayDelay);
+        }
+        
+        function stopAutoPlay() {
+            if (heroInterval) {
+                clearInterval(heroInterval);
+            }
+        }
+        
+        // Event Listeners for Buttons
+        if (heroPrevBtn) {
+            heroPrevBtn.addEventListener('click', () => {
+                prevSlide();
+                startAutoPlay(); // Reset timer
+            });
+        }
+        
+        if (heroNextBtn) {
+            heroNextBtn.addEventListener('click', () => {
+                nextSlide();
+                startAutoPlay(); // Reset timer
+            });
+        }
+        
+        // Event Listeners for Dots
+        heroDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const targetIndex = parseInt(this.getAttribute('data-index'));
+                if (!isNaN(targetIndex)) {
+                    showSlide(targetIndex);
+                    startAutoPlay(); // Reset timer
+                }
+            });
+        });
+        
+        // Swipe gestures for mobile devices
+        const heroCarouselSection = document.querySelector('.hero-carousel');
+        if (heroCarouselSection) {
+            let startX = 0;
+            let endX = 0;
+            
+            heroCarouselSection.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            }, { passive: true });
+            
+            heroCarouselSection.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                const threshold = 50;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > threshold) {
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    startAutoPlay(); // Reset timer
+                }
+            }, { passive: true });
+        }
+        
+        // Start autoplay on load
+        startAutoPlay();
+    }
 });
+

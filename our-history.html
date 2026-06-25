@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our History - Amrut International</title>
-    <meta name="description" content="Explore the milestones and growth history of Amrut International, established in 2017 in Surat, Gujarat. Learn how we progressed in Ayurvedic wellness products.">
+    <meta name="description"
+        content="Explore the milestones and growth history of Amrut International, established in 2017 in Surat, Gujarat. Learn how we progressed in Ayurvedic wellness products.">
     <!-- FontAwesome 6 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <!-- ==========================================
@@ -18,17 +21,17 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-left">
-                <span class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</span>
-                <span class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</span>
+                <a href="tel:+919879063240" class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</a>
+                <a href="mailto:amrutinternational2017@gmail.com" class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</a>
             </div>
             <div class="top-bar-right">
-                <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</span>
-                <div class="top-bar-social">
+                <a href="https://maps.google.com/?q=Surat,+Gujarat,+India" target="_blank" class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</a>
+                <!-- <div class="top-bar-social">
                     <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -39,43 +42,53 @@
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Amrut International Logo" style="height: 50px; width: auto;">
-                <div style="display: flex; flex-direction: column; justify-content: center;">
-                    <span style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-color); line-height: 1;">AMRUT</span>
-                    <span style="font-family: var(--font-body); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 2px; font-weight: 600; margin-top: 0.15rem;">INTERNATIONAL</span>
-                </div>
+                <img src="assets/images/logo.png" alt="Amrut International Logo" style="">
+                <!-- <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <span
+                        style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-color); line-height: 1;">AMRUT</span>
+                    <span
+                        style="font-family: var(--font-body); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 2px; font-weight: 600; margin-top: 0.15rem;">INTERNATIONAL</span>
+                </div> -->
             </a>
-            
+
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Our Company <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Our Company <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.75rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item"><a href="about-us.html">About Us</a></li>
-                            <li class="dropdown-item active"><a href="our-history.html">Our History</a></li>
+                            <li class="dropdown-item"><a href="our-history.html">Our History</a></li>
                             <li class="dropdown-item"><a href="certificates.html">Certificates</a></li>
                             <li class="dropdown-item"><a href="faqs.html">FAQs</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
-            
-            <div class="header-icons">
-                <button class="header-icon-btn" onclick="location.href='products.html'" title="Search Products"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <!-- <a href="about-us.html" class="btn btn-outline" style="color: white; border-color: white;">Learn
+                        More</a> -->
+            </div>
+            <!-- <div class="header-icons">
+                <button class="header-icon-btn" onclick="location.href='products.html'" title="Search Products"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
                 <button class="header-icon-btn" title="My Account"><i class="fa-regular fa-user"></i></button>
                 <button class="mobile-menu-btn" title="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
-            </div>
+            </div> -->
         </div>
     </header>
 
     <!-- ==========================================
          BREADCRUMB HERO
          ========================================== -->
-    <div class="breadcrumb-hero" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200');">
+    <div class="breadcrumb-hero"
+        style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200');">
         <div class="container">
             <h1>Our History</h1>
             <div class="breadcrumb-list">
@@ -89,52 +102,117 @@
     </div>
 
     <!-- ==========================================
-         TIMELINE SECTION
+         TIMELINE SECTION — REDESIGNED
          ========================================== -->
-    <section class="section">
+    <section class="section history-section">
         <div class="container">
             <div class="section-title text-center">
                 <span class="badge">Milestones</span>
-                <h2>Journey of Amrut International</h2>
-                <p>Learn about our growth, values, and how we expanded from a local supply startup in 2017 to an international supplier of organic products.</p>
+                <h2>Our Journey Through Time</h2>
+                <p>From a local startup in Surat to a world-renowned global exporter — explore the milestones that
+                    shaped Amrut International.</p>
             </div>
-            
-            <div class="timeline">
-                <!-- Year 2017 -->
-                <div class="timeline-item left-item">
-                    <div class="timeline-badge">2017</div>
-                    <div class="timeline-card">
-                        <h3>Company Inception</h3>
-                        <p>Amrut International was established in Surat, Gujarat (India) with a primary mission of promoting authentic Ayurvedic preparations and supplying essential organic healthcare ingredients. We started by building a network of certified herbal farmers.</p>
+
+            <div class="history-timeline">
+                <!-- Vertical spine line -->
+                <div class="history-spine"></div>
+
+                <!-- 2017 -->
+                <div class="history-item history-left">
+                    <div class="history-content">
+                        <div class="history-icon-wrap">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <div class="history-year-tag">2017</div>
+                        <h3 class="history-title">Company Inception</h3>
+                        <p class="history-desc">Amrut International was established in Surat, Gujarat (India) with a
+                            primary mission of promoting authentic Ayurvedic preparations. We started by building a
+                            network of certified herbal farmers and became a well-established name known for exclusive
+                            designs, superior quality, and reliability.</p>
+                        <div class="history-tags">
+                            <span>Founded</span>
+                            <span>Surat, Gujarat</span>
+                            <span>Ayurvedic</span>
+                        </div>
+                    </div>
+                    <div class="history-dot">
+                        <span>2017</span>
                     </div>
                 </div>
-                
-                <!-- Year 2019 -->
-                <div class="timeline-item right-item">
-                    <div class="timeline-badge">2019</div>
-                    <div class="timeline-card">
-                        <h3>Supplying Excellence</h3>
-                        <p>We expanded our supply capacity, maintaining strict delivery timelines and implementing comprehensive quality testing. By providing cost-effective raw extracts and finished cosmetics formulations, we positioned our brand as a reliable partner for companies across India.</p>
+
+                <!-- 2019 -->
+                <div class="history-item history-right">
+                    <div class="history-dot">
+                        <span>2019</span>
+                    </div>
+                    <div class="history-content">
+                        <div class="history-icon-wrap">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div class="history-year-tag">2019</div>
+                        <h3 class="history-title">Supplying Excellence</h3>
+                        <p class="history-desc">Apart from this, our ability to maintain timelines as well as quality in
+                            the assortment, providing cost effective solutions and assurance to make timely shipment of
+                            the orders placed by customers have assisted us positioning our name in the list of
+                            top-notch companies of the industry
+
+                        </p>
+                        <div class="history-tags">
+                            <span>Supply Chain</span>
+                            <span>Quality Assured</span>
+                            <span>Timely Delivery</span>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Year 2021 -->
-                <div class="timeline-item left-item">
-                    <div class="timeline-badge">2021</div>
-                    <div class="timeline-card">
-                        <h3>R&D and Formulation Launch</h3>
-                        <p>We established our dedicated Research & Development and Formulation units for Ayurvedic, herbal cosmetics, and hygiene products. This allowed us to launch specialized custom private label services for global wellness brands, ensuring strict GMP compliance.</p>
+
+                <!-- 2021 -->
+                <div class="history-item history-left">
+                    <div class="history-content">
+                        <div class="history-icon-wrap">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <div class="history-year-tag">2021</div>
+                        <h3 class="history-title">R&amp;D &amp; Formulation Launch</h3>
+                        <p class="history-desc">Research Development & Formulation Of Ayurvedic & Herbal & Hygiene
+                            Products in India and abroad.
+
+                        </p>
+                        <div class="history-tags">
+                            <span>R&amp;D</span>
+                            <span>GMP Certified</span>
+                            <span>Private Label</span>
+                        </div>
+                    </div>
+                    <div class="history-dot">
+                        <span>2021</span>
                     </div>
                 </div>
-                
-                <!-- Year 2023 -->
-                <div class="timeline-item right-item">
-                    <div class="timeline-badge">2023</div>
-                    <div class="timeline-card">
-                        <h3>Global Export Operations</h3>
-                        <p>Amrut International achieved global export registration. We successfully deployed international distribution channels, shipping Ayurvedic supplements, cosmetics, Anion chip sanitary napkins, and water care systems to distributors and importers worldwide.</p>
+
+                <!-- 2023 -->
+                <div class="history-item history-right">
+                    <div class="history-dot">
+                        <span>2023</span>
+                    </div>
+                    <div class="history-content">
+                        <div class="history-icon-wrap">
+                            <i class="fa-solid fa-earth-asia"></i>
+                        </div>
+                        <div class="history-year-tag">2023</div>
+                        <h3 class="history-title">Global Export Operations</h3>
+                        <p class="history-desc">Amrut International is a world renowned product, Supplier & Exporter of
+                            Ayurveda product, Beauty & Hygiene Product and related herbal preparations. We Specialize in
+                            adapting the modem techniques and advance Science to formulating and developing products to
+                            combat the medical challenge of the modem world.
+
+                        </p>
+                        <div class="history-tags">
+                            <span>Global Exporter</span>
+                            <span>100+ Products</span>
+                            <span>Modern Science</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -143,60 +221,76 @@
          FOOTER SECTION
          ========================================== -->
     <footer class="footer">
-        <div class="container">
+        <!-- SVG Wave Divider -->
+        <div class="footer-wave-wrapper">
+            <svg class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-bg" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="rgba(46, 82, 74, 0.15)"></path>
+                <path class="wave-fg" d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,42.7C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#1e3d36"></path>
+            </svg>
+        </div>
+        <!-- Background Floating Particles -->
+        <div class="footer-particles">
+            <span class="particle particle-1"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-2"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-3"><i class="fa-solid fa-droplet"></i></span>
+            <span class="particle particle-4"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-5"><i class="fa-solid fa-circle"></i></span>
+            <span class="particle particle-6"><i class="fa-solid fa-leaf"></i></span>
+        </div>
+<div class="container">
             <div class="footer-grid">
-                <div class="footer-about">
-                    <h3>Amrut International</h3>
-                    <p>Established in the year 2017 in Surat, Gujarat, Amrut International has become a world-renowned exporter and supplier of Ayurvedic preparations, premium beauty cosmetics, and personal hygiene products.</p>
-                    <div class="footer-socials">
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                <!-- Column 1: Company -->
+                <div class="footer-column">
+                    <h3>COMPANY</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="our-team.html">Our Team</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Discover -->
+                <div class="footer-column">
+                    <h3>DISCOVER</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Middle Logo & Certifications -->
+                <div class="footer-column footer-middle">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="Amrut International Logo">
+                    </div>
+                    <p class="footer-desc">Amrut International is a world renowned product, Supplier & Exporter of Ayurveda product, Beauty & Hygiene Product and related herbal preparations.</p>
+                    <div class="footer-certifications">
+                        <img src="assets/images/certifications.png" alt="Compliance Certifications">
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links-list">
-                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> About Us</a></li>
-                        <li><a href="our-history.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Our History</a></li>
-                        <li><a href="certificates.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Certificates</a></li>
-                        <li><a href="products.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Our Products</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Downloads</h3>
-                    <ul class="footer-links-list">
-                        <li><a href="https://amrutinternational.net/wp-content/uploads/2022/04/Sanitary-Napkin-All-Photos-1.pdf" target="_blank"><i class="fa-regular fa-file-pdf"></i> Sanitary Pads Catalog</a></li>
-                        <li><a href="https://amrutinternational.net/wp-content/uploads/2022/04/Amrut-Jal_Catalogue.pdf" target="_blank"><i class="fa-regular fa-file-pdf"></i> Water Care Catalog</a></li>
-                        <li><a href="faqs.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> Help & FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>106, Apple Square, Nr. Yogi Chowk, Punagam, Surat - 395010, Gujarat, India.</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+91 98790 63240<br>+91 99242 31091</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>amrutinternational2017@gmail.com</span>
-                        </li>
-                    </ul>
+
+                <!-- Column 4: Sign Up and Save -->
+                <div class="footer-column">
+                    <h3>SIGN UP AND SAVE</h3>
+                    <p class="subscribe-text">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                                        <form class="subscribe-form" onsubmit="alert('Thank you for subscribing!'); this.reset(); return false;">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn" aria-label="Subscribe"><i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Amrut International. All Rights Reserved. Designed by SHOPNO ECOMMERCE PVT LTD.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                </div>
+                <p>Amrut International Copyright &copy; 2024, Design By <a href="https://shopnoecommerce.com/" target="_blank" class="shopno-link">SHOPNO ECOMMERCE PVT LTD</a></p>
             </div>
         </div>
     </footer>
@@ -244,4 +338,5 @@
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

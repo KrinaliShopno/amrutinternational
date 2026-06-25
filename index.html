@@ -21,17 +21,17 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-left">
-                <span class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</span>
-                <span class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</span>
+                <a href="tel:+919879063240" class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</a>
+                <a href="mailto:amrutinternational2017@gmail.com" class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</a>
             </div>
             <div class="top-bar-right">
-                <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</span>
-                <div class="top-bar-social">
+                <a href="https://maps.google.com/?q=Surat,+Gujarat,+India" target="_blank" class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</a>
+                <!-- <div class="top-bar-social">
                     <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -42,13 +42,13 @@
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Amrut International Logo" style="height: 50px; width: auto;">
-                <div style="display: flex; flex-direction: column; justify-content: center;">
+                <img src="assets/images/logo.png" alt="Amrut International Logo" style="">
+                <!-- <div style="display: flex; flex-direction: column; justify-content: center;">
                     <span
                         style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--primary-color); line-height: 1;">AMRUT</span>
                     <span
                         style="font-family: var(--font-body); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 2px; font-weight: 600; margin-top: 0.15rem;">INTERNATIONAL</span>
-                </div>
+                </div> -->
             </a>
 
             <nav class="nav">
@@ -66,51 +66,70 @@
                     </li>
                     <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
-
-            <div class="header-icons">
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <!-- <a href="about-us.html" class="btn btn-outline" style="color: white; border-color: white;">Learn
+                        More</a> -->
+            </div>
+            <!-- <div class="header-icons">
                 <button class="header-icon-btn" onclick="location.href='products.html'" title="Search Products"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
                 <button class="header-icon-btn" title="My Account"><i class="fa-regular fa-user"></i></button>
                 <button class="mobile-menu-btn" title="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
-            </div>
+            </div> -->
         </div>
     </header>
 
     <!-- ==========================================
-         HERO SECTION
+         HERO SECTION (BANNER CAROUSEL)
          ========================================== -->
-    <section class="hero">
-        <div class="hero-background"
-            style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200');">
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
+                <a href="products.html">
+                    <img src="assets/images/hero_wellness.png" alt="Natural Wellness - Amrut International"
+                        class="carousel-img">
+                </a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <a href="products.html">
+                    <img src="assets/images/hero_cosmetics.png" alt="Natural Care - Amrut International"
+                        class="carousel-img">
+                </a>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <a href="products.html">
+                    <img src="assets/images/hero_water.png" alt="Amrut Jal - Alkaline Water Ionizer"
+                        class="carousel-img">
+                </a>
+            </div>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <span class="badge">Pure & Natural</span>
-                <h1 class="hero-title">Goodness of Natural Products</h1>
-                <p class="hero-description">Experience the power of Ayurveda and hygiene science combined. We deliver
-                    globally certified, 100% organic wellness, cosmetics, and surgical products straight to you.</p>
-                <div class="hero-actions">
-                    <a href="products.html" class="btn btn-primary">Shop Our Range</a>
-                    <a href="about-us.html" class="btn btn-outline" style="color: white; border-color: white;">Learn
-                        More</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-image-bg"></div>
-                <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=600"
-                    alt="Herbal Cosmetics Product" class="hero-image"
-                    onerror="this.src='https://placehold.co/400x500/2e524a/ffffff?text=Natural+Hygiene'">
-            </div>
+
+        <!-- Navigation Buttons -->
+        <button class="carousel-btn prev-btn" id="hero-prev-btn" aria-label="Previous banner"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn next-btn" id="hero-next-btn" aria-label="Next banner"><i
+                class="fa-solid fa-chevron-right"></i></button>
+
+        <!-- Navigation Dots -->
+        <div class="carousel-dots" id="hero-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
         </div>
     </section>
 
     <!-- ==========================================
          FEATURES BRIEF
          ========================================== -->
-    <section class="container">
+    <!-- <section class="container">
         <div class="features-wrapper">
             <div class="features-grid">
                 <div class="feature-card">
@@ -138,7 +157,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- ==========================================
          EXPERIENCE / THE STORY BEHIND
@@ -228,7 +247,8 @@
 
                 <!-- Center Column (Product Image) -->
                 <div class="showcase-col showcase-col-center">
-                    <img src="assets/images/red_onion_oil.png" alt="Red Onion Hair Oil" class="showcase-product-img">
+                    <img src="assets/images/RED_ONION_HAIR_OIL_graphics-removebg-preview.webp" alt="Red Onion Hair Oil"
+                        class="showcase-product-img">
                 </div>
 
                 <!-- Right Column -->
@@ -264,7 +284,7 @@
          ABOUT BRIEF
          ========================================== -->
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="about-brief-grid">
             <div class="about-brief-images">
                 <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=500"
@@ -299,8 +319,45 @@
                 <a href="about-us.html" class="btn btn-outline">Read Our Story</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
+
+    <!-- ==========================================
+         PRODUCT RANGE HIGHLIGHTS (CATEGORIES)
+         ========================================== -->
+    <section class="category-highlights-section">
+        <div class="category-grid">
+            <!-- Card 1: Soap -->
+            <div class="category-card category-card-soap" onclick="location.href='products.html?category=cosmetics'">
+                <div class="category-img-wrapper">
+                    <img src="assets/images/category_soap.png" alt="Lemongrass Soap Stack" class="category-product-img">
+                </div>
+                <div class="category-overlay">
+                    <div class="category-cursive">soap</div>
+                    <h3 class="category-title">Lemangrash Soap</h3>
+                </div>
+            </div>
+
+            <!-- Card 2: Sanitary Napkins -->
+            <div class="category-card category-card-sanitary" onclick="location.href='products.html?category=sanitary'">
+                <div class="category-overlay">
+                    <div class="category-cursive">sanitary napkins</div>
+                    <h3 class="category-title">sanitary napkins with anion chip</h3>
+                </div>
+            </div>
+
+            <!-- Card 3: Powder -->
+            <div class="category-card category-card-powder" onclick="location.href='products.html?category=health'">
+                <div class="category-img-wrapper">
+                    <img src="assets/images/category_powder.png" alt="Moringa Leaf Powder" class="category-product-img">
+                </div>
+                <div class="category-overlay">
+                    <div class="category-cursive">powder</div>
+                    <h3 class="category-title">100% Organic Moringa Oleifera Leaf Powder</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ==========================================
          FEATURED ITEMS (ONION RANGE & SHAMPOOS)
@@ -318,9 +375,12 @@
                 <div class="product-card">
                     <span class="product-tag">New</span>
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=400"
-                            alt="Onion Shampoo" class="product-image"
+                        <img src="assets/images/product_onion_shampoo_render.png"
+                            alt="Onion Shampoo" class="product-image primary-image"
                             onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Onion+Shampoo'">
+                        <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80&w=400"
+                            alt="Onion Shampoo Hover" class="product-image hover-image"
+                            onerror="this.style.display='none'">
                         <div class="product-actions-overlay">
                             <button class="product-action-btn view-details" data-id="5"><i
                                     class="fa-regular fa-eye"></i></button>
@@ -345,9 +405,12 @@
                 <div class="product-card">
                     <span class="product-tag">New</span>
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=400"
-                            alt="Onion Hair Oil" class="product-image"
+                        <img src="assets/images/product_onion_oil_render.png"
+                            alt="Onion Hair Oil" class="product-image primary-image"
                             onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Onion+Hair+Oil'">
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=400"
+                            alt="Onion Hair Oil Hover" class="product-image hover-image"
+                            onerror="this.style.display='none'">
                         <div class="product-actions-overlay">
                             <button class="product-action-btn view-details" data-id="6"><i
                                     class="fa-regular fa-eye"></i></button>
@@ -372,9 +435,12 @@
                 <div class="product-card">
                     <span class="product-tag">New</span>
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1519735797-402baa75a794?auto=format&fit=crop&q=80&w=400"
-                            alt="Keratin Shampoo" class="product-image"
+                        <img src="assets/images/product_keratin_shampoo_render.png"
+                            alt="Keratin Shampoo" class="product-image primary-image"
                             onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Keratin+Shampoo'">
+                        <img src="https://images.unsplash.com/photo-1519735797-402baa75a794?auto=format&fit=crop&q=80&w=400"
+                            alt="Keratin Shampoo Hover" class="product-image hover-image"
+                            onerror="this.style.display='none'">
                         <div class="product-actions-overlay">
                             <button class="product-action-btn view-details" data-id="7"><i
                                     class="fa-regular fa-eye"></i></button>
@@ -399,9 +465,12 @@
                 <div class="product-card">
                     <span class="product-tag">Popular</span>
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80&w=400"
-                            alt="Keratin Conditioner" class="product-image"
+                        <img src="assets/images/product_keratin_conditioner_render.png"
+                            alt="Keratin Conditioner" class="product-image primary-image"
                             onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Keratin+Conditioner'">
+                        <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&q=80&w=400"
+                            alt="Keratin Conditioner Hover" class="product-image hover-image"
+                            onerror="this.style.display='none'">
                         <div class="product-actions-overlay">
                             <button class="product-action-btn view-details" data-id="8"><i
                                     class="fa-regular fa-eye"></i></button>
@@ -423,7 +492,7 @@
                 </div>
             </div>
 
-            
+
             <div class="text-center" style="margin-top: 3.5rem;">
                 <a href="products.html" class="btn btn-primary">View All Products</a>
             </div>
@@ -431,11 +500,199 @@
     </section>
 
     <!-- ==========================================
-         24 HOURS COMFORTABLE (SANITARY NAPKINS)
+         WHY CHOOSE US / PERFECTION SECTION
          ========================================== -->
+    <section class="why-choose-perfection">
+        <div class="container">
+            <div class="perfection-grid">
+                <!-- Left Column: Product Image -->
+                <div class="perfection-image-wrapper">
+                    <img src="assets/images/vitamin-c-face-wash-Current-View-g-1536x1536.webp" alt="Vitamin C Facewash"
+                        class="perfection-image">
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="perfection-content">
+                    <span class="perfection-badge">Why Choose Us</span>
+                    <h2 class="perfection-title">We Believe in Perfection in the art.</h2>
+                    <p class="perfection-subtitle">Perfection that flows into every products</p>
+
+                    <div class="perfection-list">
+                        <!-- Item 1 -->
+                        <div class="perfection-item">
+                            <div class="perfection-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div class="perfection-text">
+                                <h4>Amrut International</h4>
+                                <p>We offer exclusive Private Label Cosmetics, gaining a reputation for being the most
+                                    prestigious and innovative private label cosmetic manufacturer in India. As your
+                                    private label manufacturer, we understand that every business has it's own
+                                    individuality - we specialize in helping your ideas and concepts come to fruition
+                                    and successfully enter into the market place.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="perfection-item">
+                            <div class="perfection-icon">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <div class="perfection-text">
+                                <h4>Premium Quality</h4>
+                                <p>We offer personalized service and assistance with creating your own logo unique to
+                                    your range, choosing the right products, colours and formulations to suit your
+                                    needs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="perfection-item">
+                            <div class="perfection-icon">
+                                <i class="fa-solid fa-flag"></i>
+                            </div>
+                            <div class="perfection-text">
+                                <h4>Unforgettable Experience</h4>
+                                <p>We give our assurance and guarantee that our products are of the highest quality. Our
+                                    state of the art production facilities enable us to handle large volume while still
+                                    catering to smaller individual requests while using only the finest quality natural
+                                    ingredients. We combine traditional natural ingredients with newly discovered
+                                    Compounds for a truly unique product. Our goal is to help you develop your own
+                                    individual brand of Private Label Cosmetics with our personalized service, we walk
+                                    you through the development of your own brand from our extensive range.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perfection-action">
+                        <a href="about-us.html" class="btn btn-primary">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         OUR VISION AND MISSION SECTION
+         ========================================== -->
+    <section class="vision-mission-section">
+        <div class="vision-mission-grid">
+            <div class="vision-content">
+                <span class="vision-badge">Core Values</span>
+                <h2 class="vision-title">Our Vision and Mission</h2>
+                <p class="vision-text">We, as a quality-centric firm, believe that the key to success is in doing the
+                    business in ethical manner. Since the very first day of our incorporation, we are envisioned to be a
+                    natural choice of customers seeking skin care and allied products. We aim to achieve this by
+                    promoting a wide channel of distribution, thereby increasing our supplying capacity. Constant
+                    adaption within the domain as well as business expansion is the main thing that always remains in
+                    our mind. Further, we emphasize on all round development through strengthening our manpower,
+                    developing quality management systems and maintaining cordial relation with buyers.</p>
+            </div>
+            <div class="vision-image"></div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         EMBRACE NATURES HEALING TOUCH / HOW TO USE
+         ========================================== -->
+    <section class="how-to-use-section">
+        <div class="container">
+            <div class="how-to-use-grid">
+                <!-- Left Column: Copy & Details -->
+                <div class="how-to-use-content">
+                    <span class="badge">Product Guide</span>
+                    <h2 class="how-to-use-title">Embrace Nature's Healing Touch</h2>
+                    <p class="how-to-use-intro">MakeLLos Mooch & Beard Growth Oil is formulated to boost your natural
+                        glow. This herbal blend nourishes hair roots, softens coarse hair, and moisturizes the skin
+                        underneath to promote a fuller, healthier beard.</p>
+
+                    <div class="how-to-use-steps">
+                        <div class="step-item">
+                            <span class="step-number">01</span>
+                            <div class="step-text">
+                                <strong>Warm the Oil</strong>
+                                <p>Take a desired amount of mooch beard oil in your palm and rub palms together to warm
+                                    it up.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">02</span>
+                            <div class="step-text">
+                                <strong>Massage Facial Skin</strong>
+                                <p>Apply to your facial hair and skin. Gently massage your beard and mooch for 2-3
+                                    minutes.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-number">03</span>
+                            <div class="step-text">
+                                <strong>Brush & Style</strong>
+                                <p>Use a beard comb or brush for even application. For best results, leave it on
+                                    overnight.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="how-to-use-action">
+                        <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International,%20I%20would%20like%20to%20inquire%20about%20MakeLLos%20Mooch%20Beard%20Growth%20Oil"
+                            target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> INQUIRE ON
+                            WHATSAPP</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Graphic -->
+                <div class="how-to-use-visual">
+                    <img src="assets/images/How-to-Use-Mooch-Beard-Growth-Oil-1-768x768.webp" alt="How to Use MakeLLos Beard Growth Oil"
+                        class="how-to-use-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         OUR GUARANTEE SECTION
+         ========================================== -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="guarantee-leaf-divider"><i class="fa-solid fa-leaf" style="color: var(--primary-color); font-size: 1.5rem;"></i></span>
+                <h2 style="margin-top: 1rem;">Our Guarantee</h2>
+                <p class="guarantee-subtitle" style="max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">Amrut International is a world renowned product, Supplier & Exporter of Ayurveda product, Beauty & Hygiene Product and related herbal preparations.</p>
+            </div>
+
+            <div class="guarantee-grid">
+                <!-- Item 1 -->
+                <div class="guarantee-card">
+                    <div class="guarantee-icon-wrapper">
+                        <img src="assets/images/guarantee_fields.png" alt="Fields / Mountains Illustration" class="guarantee-icon-img">
+                    </div>
+                    <h3>Products</h3>
+                    <p>we Specialize in adapting the modern techniques and advance Science to formulating and developing products to combat the medical challenge of the modern world.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="guarantee-card">
+                    <div class="guarantee-icon-wrapper">
+                        <img src="assets/images/guarantee_teapot.png" alt="Teapot Illustration" class="guarantee-icon-img">
+                    </div>
+                    <h3>Great customer service</h3>
+                    <p>our ability to maintain timelines as well as quality in the assortment, providing cost effective solutions and assurance to make timely shipment of the orders placed by customers.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="guarantee-card">
+                    <div class="guarantee-icon-wrapper">
+                        <img src="assets/images/guarantee_leaves.png" alt="Leaves Illustration" class="guarantee-icon-img">
+                    </div>
+                    <h3>Natural</h3>
+                    <p>Product formulations at our end only comprise of natural materials that have been recognized For being potentially beneficial in all regards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="comfort-section">
-        <div class="comfort-section-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=600');">
+        <div class="comfort-section-bg" style="background-image: url('assets/images/gfg-e1684039792660.webp');">
         </div>
         <div class="container">
             <div class="comfort-grid">
@@ -486,11 +743,11 @@
                     </div>
                 </div>
 
-                <div class="comfort-image-container">
-                    <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=400"
+                <!-- <div class="comfort-image-container">
+                    <img src="assets/images/pngkit_green-tea.webp"
                         alt="Sanitary Pads Package Mockup" class="comfort-img"
                         onerror="this.src='https://placehold.co/300x400/ffffff/2e524a?text=Sanitary+Pad'">
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -642,70 +899,76 @@
          FOOTER SECTION
          ========================================== -->
     <footer class="footer">
-        <div class="container">
+        <!-- SVG Wave Divider -->
+        <div class="footer-wave-wrapper">
+            <svg class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-bg" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="rgba(46, 82, 74, 0.15)"></path>
+                <path class="wave-fg" d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,42.7C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#1e3d36"></path>
+            </svg>
+        </div>
+        <!-- Background Floating Particles -->
+        <div class="footer-particles">
+            <span class="particle particle-1"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-2"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-3"><i class="fa-solid fa-droplet"></i></span>
+            <span class="particle particle-4"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-5"><i class="fa-solid fa-circle"></i></span>
+            <span class="particle particle-6"><i class="fa-solid fa-leaf"></i></span>
+        </div>
+<div class="container">
             <div class="footer-grid">
-                <div class="footer-about">
-                    <h3>Amrut International</h3>
-                    <p>Established in the year 2017 in Surat, Gujarat, Amrut International has become a world-renowned
-                        exporter and supplier of Ayurvedic preparations, premium beauty cosmetics, and personal hygiene
-                        products.</p>
-                    <div class="footer-socials">
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                <!-- Column 1: Company -->
+                <div class="footer-column">
+                    <h3>COMPANY</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="our-team.html">Our Team</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Discover -->
+                <div class="footer-column">
+                    <h3>DISCOVER</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Middle Logo & Certifications -->
+                <div class="footer-column footer-middle">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="Amrut International Logo">
+                    </div>
+                    <p class="footer-desc">Amrut International is a world renowned product, Supplier & Exporter of Ayurveda product, Beauty & Hygiene Product and related herbal preparations.</p>
+                    <div class="footer-certifications">
+                        <img src="assets/images/certifications.png" alt="Compliance Certifications">
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links-list">
-                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                About Us</a></li>
-                        <li><a href="our-history.html"><i class="fa-solid fa-chevron-right"
-                                    style="font-size: 0.7rem;"></i> Our History</a></li>
-                        <li><a href="certificates.html"><i class="fa-solid fa-chevron-right"
-                                    style="font-size: 0.7rem;"></i> Certificates</a></li>
-                        <li><a href="products.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                Our Products</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Downloads</h3>
-                    <ul class="footer-links-list">
-                        <li><a href="https://amrutinternational.net/wp-content/uploads/2022/04/Sanitary-Napkin-All-Photos-1.pdf"
-                                target="_blank"><i class="fa-regular fa-file-pdf"></i> Sanitary Pads Catalog</a></li>
-                        <li><a href="https://amrutinternational.net/wp-content/uploads/2022/04/Amrut-Jal_Catalogue.pdf"
-                                target="_blank"><i class="fa-regular fa-file-pdf"></i> Water Care Catalog</a></li>
-                        <li><a href="faqs.html"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
-                                Help & FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>106, Apple Square, Nr. Yogi Chowk, Punagam, Surat - 395010, Gujarat, India.</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+91 98790 63240<br>+91 99242 31091</span>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>amrutinternational2017@gmail.com</span>
-                        </li>
-                    </ul>
+
+                <!-- Column 4: Sign Up and Save -->
+                <div class="footer-column">
+                    <h3>SIGN UP AND SAVE</h3>
+                    <p class="subscribe-text">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                                        <form class="subscribe-form" onsubmit="alert('Thank you for subscribing!'); this.reset(); return false;">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn" aria-label="Subscribe"><i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Amrut International. All Rights Reserved. Designed by SHOPNO ECOMMERCE PVT LTD.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                </div>
+                <p>Amrut International Copyright &copy; 2024, Design By <a href="https://shopnoecommerce.com/" target="_blank" class="shopno-link">SHOPNO ECOMMERCE PVT LTD</a></p>
             </div>
         </div>
     </footer>
