@@ -67,7 +67,7 @@
                     <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li> -->
                 </ul>
             </nav>
                         <div class="hero-actions">
@@ -499,6 +499,67 @@
 
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ==========================================
+            // STAT COUNTERS COUNT-UP ANIMATION
+            // ==========================================
+            const statsSection = document.querySelector('.about-stats-container');
+            const statNumbers = document.querySelectorAll('.about-stat-number');
+            
+            if (statsSection && statNumbers.length > 0) {
+                let animated = false;
+                
+                const countUp = () => {
+                    statNumbers.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        if (isNaN(target)) return;
+                        
+                        counter.textContent = '0+';
+                        const duration = 1500; // 1.5 seconds animation
+                        const startTime = performance.now();
+                        
+                        const updateCount = (currentTime) => {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            
+                            // Ease out quadratic
+                            const easeProgress = progress * (2 - progress);
+                            const current = Math.floor(easeProgress * target);
+                            
+                            counter.textContent = current + '+';
+                            
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                counter.textContent = target + '+';
+                            }
+                        };
+                        
+                        requestAnimationFrame(updateCount);
+                    });
+                };
+
+                // Use IntersectionObserver to start counting when section enters viewport
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !animated) {
+                                countUp();
+                                animated = true;
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.15 });
+                    
+                    observer.observe(statsSection);
+                } else {
+                    // Fallback for older browsers
+                    countUp();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

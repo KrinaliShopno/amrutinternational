@@ -67,7 +67,7 @@
                     <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li> -->
                 </ul>
             </nav>
             
@@ -1021,6 +1021,247 @@
 
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ==========================================
+            // EXPERIENCE PRODUCT SLIDER
+            // ==========================================
+            const expSlider = document.getElementById('exp-slider');
+            const expPrevBtn = document.getElementById('exp-prev-btn');
+            const expNextBtn = document.getElementById('exp-next-btn');
+
+            if (expSlider && expPrevBtn && expNextBtn) {
+                let currentIndex = 0;
+                const cards = expSlider.querySelectorAll('.experience-card');
+                const totalCards = cards.length;
+
+                function getVisibleCards() {
+                    const width = window.innerWidth;
+                    if (width > 1024) return 3;
+                    if (width > 768) return 2;
+                    return 1;
+                }
+
+                function updateSlider() {
+                    const visible = getVisibleCards();
+                    const maxIndex = Math.max(0, totalCards - visible);
+                    
+                    // Adjust current index if it exceeds the new bounds
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+
+                    if (cards.length > 0) {
+                        const cardWidth = cards[0].getBoundingClientRect().width;
+                        const computedGap = parseFloat(window.getComputedStyle(expSlider).gap) || 32;
+                        const offset = currentIndex * (cardWidth + computedGap);
+                        expSlider.style.transform = `translateX(-${offset}px)`;
+                    }
+
+                    // Enable/disable buttons
+                    expPrevBtn.disabled = currentIndex === 0;
+                    expNextBtn.disabled = currentIndex >= maxIndex;
+                    
+                    // Hide buttons if all cards are visible
+                    if (maxIndex === 0) {
+                        expPrevBtn.style.visibility = 'hidden';
+                        expNextBtn.style.visibility = 'hidden';
+                    } else {
+                        expPrevBtn.style.visibility = 'visible';
+                        expNextBtn.style.visibility = 'visible';
+                    }
+                }
+
+                expPrevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+
+                expNextBtn.addEventListener('click', () => {
+                    const visible = getVisibleCards();
+                    const maxIndex = totalCards - visible;
+                    if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+
+                // Touch Swipe Support
+                let startX = 0;
+                let endX = 0;
+
+                expSlider.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                }, { passive: true });
+
+                expSlider.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    const threshold = 50;
+                    const diff = startX - endX;
+
+                    const visible = getVisibleCards();
+                    const maxIndex = totalCards - visible;
+
+                    if (diff > threshold && currentIndex < maxIndex) {
+                        currentIndex++;
+                        updateSlider();
+                    } else if (diff < -threshold && currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                }, { passive: true });
+
+                // Initialize and listen to resize
+                window.addEventListener('resize', updateSlider);
+                
+                // Wait slightly for layout initialization
+                setTimeout(updateSlider, 200);
+            }
+
+            // ==========================================
+            // HERO BANNER CAROUSEL
+            // ==========================================
+            const heroSlides = document.querySelectorAll('.hero-carousel .carousel-slide');
+            const heroPrevBtn = document.getElementById('hero-prev-btn');
+            const heroNextBtn = document.getElementById('hero-next-btn');
+            const heroDots = document.querySelectorAll('.hero-carousel .carousel-dot');
+            
+            if (heroSlides.length > 0) {
+                let heroIndex = 0;
+                let heroInterval;
+                const autoPlayDelay = 5000; // 5 seconds
+                
+                function showSlide(index) {
+                    // Remove active classes
+                    heroSlides.forEach(slide => slide.classList.remove('active'));
+                    heroDots.forEach(dot => dot.classList.remove('active'));
+                    
+                    // Set new active slide and dot
+                    heroIndex = index;
+                    if (heroIndex >= heroSlides.length) heroIndex = 0;
+                    if (heroIndex < 0) heroIndex = heroSlides.length - 1;
+                    
+                    heroSlides[heroIndex].classList.add('active');
+                    if (heroDots[heroIndex]) {
+                        heroDots[heroIndex].classList.add('active');
+                    }
+                }
+                
+                function nextSlide() {
+                    showSlide(heroIndex + 1);
+                }
+                
+                function prevSlide() {
+                    showSlide(heroIndex - 1);
+                }
+                
+                function startAutoPlay() {
+                    stopAutoPlay();
+                    heroInterval = setInterval(nextSlide, autoPlayDelay);
+                }
+                
+                function stopAutoPlay() {
+                    if (heroInterval) {
+                        clearInterval(heroInterval);
+                    }
+                }
+                
+                // Event Listeners for Buttons
+                if (heroPrevBtn) {
+                    heroPrevBtn.addEventListener('click', () => {
+                        prevSlide();
+                        startAutoPlay(); // Reset timer
+                    });
+                }
+                
+                if (heroNextBtn) {
+                    heroNextBtn.addEventListener('click', () => {
+                        nextSlide();
+                        startAutoPlay(); // Reset timer
+                    });
+                }
+                
+                // Event Listeners for Dots
+                heroDots.forEach(dot => {
+                    dot.addEventListener('click', function() {
+                        const targetIndex = parseInt(this.getAttribute('data-index'));
+                        if (!isNaN(targetIndex)) {
+                            showSlide(targetIndex);
+                            startAutoPlay(); // Reset timer
+                        }
+                    });
+                });
+                
+                // Swipe gestures for mobile devices
+                const heroCarouselSection = document.querySelector('.hero-carousel');
+                if (heroCarouselSection) {
+                    let startX = 0;
+                    let endX = 0;
+                    
+                    heroCarouselSection.addEventListener('touchstart', (e) => {
+                        startX = e.touches[0].clientX;
+                    }, { passive: true });
+                    
+                    heroCarouselSection.addEventListener('touchend', (e) => {
+                        endX = e.changedTouches[0].clientX;
+                        const threshold = 50;
+                        const diff = startX - endX;
+                        
+                        if (Math.abs(diff) > threshold) {
+                            if (diff > 0) {
+                                nextSlide();
+                            } else {
+                                prevSlide();
+                            }
+                            startAutoPlay(); // Reset timer
+                        }
+                    }, { passive: true });
+                }
+                
+                // Start autoplay on load
+                startAutoPlay();
+            }
+
+            // ==========================================
+            // PRODUCT EVENTS (VIEW DETAILS & WHATSAPP)
+            // ==========================================
+            const viewBtns = document.querySelectorAll('.view-details');
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.location.href = 'products.html';
+                });
+            });
+
+            const buyBtns = document.querySelectorAll('.buy-now');
+            buyBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const title = this.getAttribute('data-title');
+                    sendWhatsAppInquiry(title);
+                });
+            });
+            
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (e.target.closest('.buy-now') || e.target.closest('.product-buy-btn')) return;
+                    window.location.href = 'products.html';
+                });
+            });
+
+            function sendWhatsAppInquiry(productTitle) {
+                const phoneNumber = "9924231091"; // Team Sales number
+                const text = `Hello Amrut International, I would like to inquire about: ${productTitle}. Please share more details and price. Thank you!`;
+                const url = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(text)}`;
+                window.open(url, '_blank');
+            }
+        });
+    </script>
 </body>
 
 </html>

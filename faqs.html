@@ -67,7 +67,7 @@
                     <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
                     <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li> -->
                 </ul>
             </nav>
                         <div class="hero-actions">
@@ -364,6 +364,41 @@
 
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ==========================================
+            // FAQS ACCORDION
+            // ==========================================
+            const faqCards = document.querySelectorAll('.faq-card');
+            faqCards.forEach(card => {
+                const header = card.querySelector('.faq-header');
+                const body = card.querySelector('.faq-body');
+                
+                if (header && body) {
+                    header.addEventListener('click', function() {
+                        const isActive = card.classList.contains('active');
+                        
+                        // Close all other FAQs
+                        faqCards.forEach(otherCard => {
+                            if (otherCard !== card) {
+                                otherCard.classList.remove('active');
+                                otherCard.querySelector('.faq-body').style.maxHeight = null;
+                            }
+                        });
+                        
+                        // Toggle current FAQ
+                        if (isActive) {
+                            card.classList.remove('active');
+                            body.style.maxHeight = null;
+                        } else {
+                            card.classList.add('active');
+                            body.style.maxHeight = body.scrollHeight + "px";
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
