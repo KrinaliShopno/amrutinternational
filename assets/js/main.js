@@ -15,6 +15,60 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ==========================================
+    // DYNAMIC ACTIVE MENU HIGHLIGHTING
+    // ==========================================
+    let currentPath = window.location.pathname.split('/').pop();
+    if (currentPath) {
+        currentPath = currentPath.split('?')[0].split('#')[0];
+    }
+    if (!currentPath || currentPath === '') {
+        currentPath = 'index.html';
+    }
+    
+    // Normalize detail pages to their main categories
+    let targetPath = currentPath;
+    if (currentPath.startsWith('blog-detail-')) {
+        targetPath = 'blog.html';
+    } else if (currentPath === 'product-detail.html') {
+        targetPath = 'products.html';
+    }
+    
+    // Clear all active classes first
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // Find matching link
+    let matched = false;
+    
+    // Check dropdown items first (dropdown links are inside dropdown-menu)
+    const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+    dropdownLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href === targetPath) {
+            const parentNavItem = link.closest('.nav-item');
+            if (parentNavItem) {
+                parentNavItem.classList.add('active');
+                matched = true;
+            }
+        }
+    });
+    
+    // If not matched in dropdowns, check main nav links
+    if (!matched) {
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href === targetPath) {
+                const parentNavItem = link.closest('.nav-item');
+                if (parentNavItem) {
+                    parentNavItem.classList.add('active');
+                }
+            }
+        });
+    }
+
+    // ==========================================
     // MOBILE NAVIGATION MENU
     // ==========================================
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -338,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <img src="${product.image}" alt="${product.title}" class="${primaryClass}" onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=${encodeURIComponent(product.title)}'">
                     ${hoverImgHTML}
                     <div class="product-actions-overlay">
-                        <button class="product-action-btn view-details" data-id="${product.id}" title="Quick View">
+                        <button class="product-action-btn view-details" data-id="${product.id}" title="View Details">
                             <i class="fa-regular fa-eye"></i>
                         </button>
                         <button class="product-action-btn buy-now" data-title="${product.title}" title="Inquire on WhatsApp">
@@ -351,13 +405,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h3 class="product-title">${product.title}</h3>
                     <div class="product-card-footer">
                         <span class="product-price">${product.price}</span>
-                        <button class="btn btn-primary product-buy-btn buy-now" data-title="${product.title}">
-                            <i class="fa-brands fa-whatsapp"></i> Inquire
-                        </button>
+                        <a href="product-detail.html?id=${product.id}" class="btn btn-primary product-buy-btn" style="text-decoration:none;">
+                            View Details
+                        </a>
                     </div>
                 </div>
             `;
-            
+
+            // Make whole card navigate to detail page (except WhatsApp btn)
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('.buy-now')) return; // let WhatsApp button work
+                const detailBtn = e.target.closest('.view-details');
+                const id = detailBtn ? detailBtn.getAttribute('data-id') : product.id;
+                window.location.href = `product-detail.html?id=${id}`;
+            });
+
             productsContainer.appendChild(card);
         });
 
@@ -424,91 +486,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render initial list (if container exists)
     if (productsContainer) {
         renderProducts(productsData);
-    }
-
-    // ==========================================
-    // MODAL & INQUIRY ACTIONS
-    // ==========================================
-    const modalOverlay = document.getElementById('product-modal');
-    const modalCloseBtn = document.getElementById('modal-close');
-    const modalContent = document.getElementById('modal-product-details');
-
-    function openModal(productId) {
-        const product = productsData.find(p => p.id == productId);
-        if (!product || !modalOverlay || !modalContent) return;
-
-        modalContent.innerHTML = `
-            <div class="modal-product-gallery">
-                <img src="${product.image}" alt="${product.title}" class="modal-product-img" onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=${encodeURIComponent(product.title)}'">
-            </div>
-            <div class="modal-product-info">
-                <span class="modal-product-category">${product.categoryLabel}</span>
-                <h2 class="modal-product-title">${product.title}</h2>
-                <div class="modal-product-price">${product.price}</div>
-                <p class="modal-product-description">${product.description}</p>
-                
-                <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-                    <button class="btn btn-whatsapp buy-now" data-title="${product.title}" style="flex-grow: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight:600;">
-                        <i class="fa-brands fa-whatsapp"></i> Chat to Order on WhatsApp
-                    </button>
-                </div>
-
-                <div class="modal-product-meta">
-                    <div><strong>Availability:</strong> In Stock (Available for Export & Wholesale)</div>
-                    <div><strong>Manufacturer:</strong> Amrut International, Surat</div>
-                    <div><strong>Category:</strong> ${product.categoryLabel}</div>
-                </div>
-            </div>
-        `;
-
-        modalOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Stop background scroll
-
-        // Re-attach buy-now click listener inside modal
-        const modalBuyBtn = modalContent.querySelector('.buy-now');
-        if (modalBuyBtn) {
-            modalBuyBtn.addEventListener('click', function() {
-                const title = this.getAttribute('data-title');
-                sendWhatsAppInquiry(title);
+    } else {
+        attachProductEvents();
+        
+        // Make the whole static card clickable to go to products.html (except WhatsApp buttons)
+        const staticCards = document.querySelectorAll('.product-card');
+        staticCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('.buy-now')) return;
+                window.location.href = 'products.html';
             });
-        }
-    }
-
-    function closeModal() {
-        if (modalOverlay) {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
-
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', closeModal);
-    }
-    
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', function(e) {
-            if (e.target === modalOverlay) {
-                closeModal();
-            }
         });
     }
 
-    // Attach quick view and inquiry listeners to product cards
+    // ==========================================
+    // PRODUCT EVENTS (VIEW DETAILS & WHATSAPP)
+    // ==========================================
     function attachProductEvents() {
+        // view-details btn → navigate to product detail page
         const viewBtns = document.querySelectorAll('.view-details');
-        const buyBtns = document.querySelectorAll('.buy-now');
-
         viewBtns.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                const id = this.getAttribute('data-id');
-                openModal(id);
+                e.stopPropagation();
+                const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+                if (currentFile !== 'products.html') {
+                    window.location.href = 'products.html';
+                } else {
+                    const id = this.getAttribute('data-id');
+                    window.location.href = `product-detail.html?id=${id}`;
+                }
             });
         });
 
+        // buy-now (WhatsApp) btns
+        const buyBtns = document.querySelectorAll('.buy-now');
         buyBtns.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
                 const title = this.getAttribute('data-title');
                 sendWhatsAppInquiry(title);
             });

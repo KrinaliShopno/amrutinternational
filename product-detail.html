@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Amrut International</title>
+    <meta name="description" content="View detailed information about Amrut International's Ayurvedic, herbal and wellness products.">
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* ===== PRODUCT DETAIL PAGE STYLES ===== */
+
+        .pd-section {
+            padding: 4rem 0 6rem;
+            background: #f8fbfa;
+            min-height: 60vh;
+        }
+
+        /* Breadcrumb */
+        .pd-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .pd-breadcrumb a {
+            color: var(--primary-color);
+            transition: opacity 0.2s;
+        }
+        .pd-breadcrumb a:hover { opacity: 0.7; text-decoration: underline; }
+        .pd-breadcrumb i { font-size: 0.65rem; color: var(--border-color); }
+        .pd-breadcrumb span { color: var(--text-color); font-weight: 500; }
+
+        /* Layout */
+        .pd-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Gallery */
+        .pd-gallery {
+            position: sticky;
+            top: 100px;
+        }
+
+        .pd-main-image-box {
+            background: linear-gradient(145deg, #eef3f1 0%, #ddeae6 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 380px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(46,82,74,0.08);
+            box-shadow: 0 8px 30px rgba(46,82,74,0.1);
+        }
+
+        .pd-main-img {
+            max-height: 320px;
+            max-width: 100%;
+            object-fit: contain;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .pd-hover-thumb-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .pd-thumb {
+            width: 72px;
+            height: 72px;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #eef3f1, #ddeae6);
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .pd-thumb:hover, .pd-thumb.active {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(46,82,74,0.12);
+        }
+        .pd-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 6px;
+        }
+
+        /* Product Info */
+        .pd-info {}
+
+        .pd-category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(46,82,74,0.08);
+            color: var(--primary-color);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            margin-bottom: 1rem;
+        }
+
+        .pd-title {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            color: var(--primary-dark);
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        .pd-tag-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .pd-tag {
+            background: var(--primary-dark);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+
+        .pd-divider {
+            height: 1px;
+            background: var(--border-color);
+            margin: 1.5rem 0;
+        }
+
+        .pd-price-box {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pd-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: var(--font-body);
+        }
+
+        .pd-price-note {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .pd-availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.82rem;
+            color: #2e7d32;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .pd-availability i { font-size: 0.7rem; }
+
+        .pd-description {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Action Buttons */
+        .pd-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .pd-btn-whatsapp {
+            flex: 1;
+            min-width: 200px;
+            background: #25d366;
+            color: white;
+            border: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-family: var(--font-body);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+        }
+        .pd-btn-whatsapp:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+        }
+
+        .pd-btn-contact {
+            flex: 0 0 auto;
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.9rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: var(--font-body);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .pd-btn-contact:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Meta Info */
+        .pd-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem 1.5rem;
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            border: 1px solid rgba(46,82,74,0.08);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+
+        .pd-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .pd-meta-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .pd-meta-value {
+            font-size: 0.88rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* ===== RELATED PRODUCTS SECTION ===== */
+        .related-section {
+            padding: 4rem 0;
+            background: white;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .related-heading {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .related-heading h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--primary-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .related-heading p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* Not found state */
+        .pd-not-found {
+            text-align: center;
+            padding: 6rem 2rem;
+            color: var(--text-muted);
+        }
+
+        .pd-not-found i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--border-color);
+            display: block;
+        }
+
+        .pd-not-found h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+  @media (max-width: 1024px) {
+             .related-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .pd-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .pd-gallery {
+                position: static;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pd-meta-grid {
+                grid-template-columns: 1fr;
+            }
+            .pd-actions {
+                flex-direction: column;
+            }
+            .pd-btn-whatsapp, .pd-btn-contact {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         TOP BAR
+         ========================================== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+919879063240" class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</a>
+                <a href="mailto:amrutinternational2017@gmail.com" class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://maps.google.com/?q=Surat,+Gujarat,+India" target="_blank" class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         HEADER / NAVIGATION
+         ========================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Amrut International Logo">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Our Company <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="about-us.html">About Us</a></li>
+                            <li class="dropdown-item"><a href="our-history.html">Our History</a></li>
+                            <li class="dropdown-item"><a href="certificates.html">Certificates</a></li>
+                            <li class="dropdown-item"><a href="faqs.html">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+                        <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+            <button class="mobile-menu-btn" title="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         PRODUCT DETAIL SECTION
+         ========================================== -->
+    <section class="pd-section">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="pd-breadcrumb" id="pd-breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <a href="products.html">Products</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span id="pd-breadcrumb-name">Loading...</span>
+            </nav>
+
+            <!-- Main Layout -->
+            <div class="pd-layout" id="pd-layout">
+                <!-- Loading state -->
+                <div style="grid-column: 1/-1; text-align:center; padding: 4rem; color: var(--text-muted);">
+                    <i class="fa-solid fa-spinner fa-spin" style="font-size:2rem; margin-bottom:1rem; display:block;"></i>
+                    Loading product...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RELATED PRODUCTS
+         ========================================== -->
+    <section class="related-section" id="related-section" style="display:none;">
+        <div class="container">
+            <div class="related-heading">
+                <span class="blog-tag-line"><i class="fa-solid fa-leaf"></i> You May Also Like</span>
+                <h2>Related Products</h2>
+                <p>Explore more products from the same category</p>
+            </div>
+            <div class="related-grid" id="related-grid"></div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer-wave-wrapper">
+            <svg class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-bg" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="rgba(46, 82, 74, 0.15)"></path>
+                <path class="wave-fg" d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,42.7C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#1e3d36"></path>
+            </svg>
+        </div>
+        <div class="footer-particles">
+            <span class="particle particle-1"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-2"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-3"><i class="fa-solid fa-droplet"></i></span>
+            <span class="particle particle-4"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-5"><i class="fa-solid fa-circle"></i></span>
+            <span class="particle particle-6"><i class="fa-solid fa-leaf"></i></span>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>COMPANY</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="our-team.html">Our Team</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>DISCOVER</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms and conditions</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-middle">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="Amrut International Logo">
+                    </div>
+                    <p class="footer-desc">Amrut International is a world renowned product, Supplier &amp; Exporter of Ayurveda product, Beauty &amp; Hygiene Product and related herbal preparations.</p>
+                    <div class="footer-certifications">
+                        <img src="assets/images/certifications.png" alt="Compliance Certifications">
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>SIGN UP AND SAVE</h3>
+                    <p class="subscribe-text">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                    <form class="subscribe-form" onsubmit="alert('Thank you for subscribing!'); this.reset(); return false;">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn" aria-label="Subscribe"><i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Amrut International Copyright &copy; 2024, Design By <a href="https://shopnoecommerce.com/" target="_blank" class="shopno-link">SHOPNO ECOMMERCE PVT LTD</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget">
+        <button class="whatsapp-trigger-btn" title="Chat with us on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+        <div class="whatsapp-box">
+            <div class="whatsapp-box-header">
+                <i class="fa-brands fa-whatsapp" style="font-size: 2.2rem; color: #25d366;"></i>
+                <div>
+                    <h3>Start a Conversation</h3>
+                    <p>Typically replies in minutes</p>
+                </div>
+            </div>
+            <div class="whatsapp-box-body">
+                <a href="https://wa.me/919924231091" target="_blank" class="whatsapp-agent-card">
+                    <div class="whatsapp-agent-info">
+                        <div class="whatsapp-agent-avatar">TS</div>
+                        <div class="whatsapp-agent-details"><h4>Team Sales</h4><p>Domestic Inquiries</p></div>
+                    </div>
+                    <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
+                </a>
+                <a href="https://wa.me/919879063240" target="_blank" class="whatsapp-agent-card">
+                    <div class="whatsapp-agent-info">
+                        <div class="whatsapp-agent-avatar">EH</div>
+                        <div class="whatsapp-agent-details"><h4>Export Head</h4><p>International Business</p></div>
+                    </div>
+                    <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS (for header, WhatsApp widget, etc.) -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Product Detail Page Logic -->
+    <script>
+        // =============================================
+        // PRODUCTS DATA (same as main.js)
+        // =============================================
+        const productsData = [
+            { id: 1, title: "100% Organic Moringa Oleifera Leaf Powder", category: "health", categoryLabel: "Health & Nutraceutical", price: "₹350.00", image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=600", description: "Organic Moringa Oleifera Leaf Powder is derived from the dried leaves of the drumstick tree. It is rich in essential vitamins, minerals, antioxidants, and amino acids. A perfect daily dietary supplement to boost energy levels, improve immune support, and detoxify the body naturally.", tag: "organic" },
+            { id: 2, title: "Organic Moringa Oleifera Capsule - 60 Caps", category: "health", categoryLabel: "Health & Nutraceutical", price: "₹450.00", image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600", description: "High-potency organic moringa leaves packed into easy-to-consume vegetable capsules. Contains 60 capsules per bottle. Supports joint health, digestion, cardiovascular health, and acts as a powerful source of natural calcium and iron.", tag: "best seller" },
+            { id: 3, title: "Pure Tulsi Drops - Immunity Booster", category: "health", categoryLabel: "Health & Nutraceutical", price: "₹180.00", image: "https://images.unsplash.com/photo-1611070973770-b1a672610042?auto=format&fit=crop&q=80&w=600", description: "A natural blend of five species of holy basil (Tulsi) extracts. Known for its strong anti-microbial, anti-inflammatory, and immune-strengthening benefits. Just 2-3 drops in water daily helps detoxify and fight off common coughs and cold.", tag: "natural" },
+            { id: 4, title: "USA Formulated Whey Protein", category: "health", categoryLabel: "Health & Nutraceutical", price: "₹3,200.00", image: "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600", description: "Premium quality whey protein concentrate & isolate blend. Formulated in the USA to boost athletic performance, testosterone, and speed up muscle recovery. Rich in BCAA and essential amino acids. Sulphate & Gluten free.", tag: "new" },
+            { id: 5, title: "Onion Hair Shampoo Sulphate & Paraben Free - 300ml", category: "cosmetics", categoryLabel: "Herbal Cosmetics", price: "₹399.00", image: "assets/images/product_onion_shampoo_render.png", hoverImage: "assets/images/product_onion_shampoo.png", description: "Infused with Red Onion Extract, Black Seed Oil, and Vitamin E. Gently cleanses hair and scalp without drying, helps strengthen hair follicles, reduces hair fall, and encourages healthy growth. Free from harsh sulphates, parabens, and mineral oils.", tag: "new" },
+            { id: 6, title: "Rutucharya Onion Hair Oil Multi-Purpose Growth - 100ml", category: "cosmetics", categoryLabel: "Herbal Cosmetics", price: "₹299.00", image: "assets/images/product_onion_oil_render.png", hoverImage: "assets/images/red_onion_oil.png", description: "A nourishing blend of Red Onion oil, Almond oil, Castor oil, Jojoba oil, and Coconut oil. Provides deep conditioning, reduces hair thinning, controls dandruff, and restores silky luster and volume to dry, damaged hair.", tag: "new" },
+            { id: 7, title: "Protect & Repair Keratin Smoothing Shampoo - 250ml", category: "cosmetics", categoryLabel: "Herbal Cosmetics", price: "₹450.00", image: "assets/images/product_keratin_shampoo_render.png", hoverImage: "assets/images/product_onion_shampoo.png", description: "Formulated with Hydrolyzed Keratin and nourishing oils to repair colored or heat-styled hair. Smoothens dry hair cuticles, locks in moisture, and eliminates frizz, leaving your hair looking naturally straight and shiny.", tag: "new" },
+            { id: 8, title: "Keratin Conditioner with Keratin Proteins & Argan Oil - 250ml", category: "cosmetics", categoryLabel: "Herbal Cosmetics", price: "₹490.00", image: "assets/images/product_keratin_conditioner_render.png", hoverImage: "assets/images/product_keratin_shampoo_render.png", description: "Enriched with Morocco Argan Oil and Keratin proteins. Provides intense moisture therapy to dry, lifeless hair. Detangles, reduces hair breakage, and keeps locks smooth and bouncy all day long.", tag: "popular" },
+            { id: 9, title: "Advanced Hair Growth Serum - 50ml", category: "cosmetics", categoryLabel: "Herbal Cosmetics", price: "₹650.00", image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600", description: "Lightweight, non-sticky hair vitalizer serum. Infused with Redensyl, Ginseng, and Onion stem cells. Re-activates hair stem cells to encourage denser, thicker hair growth while controlling split ends.", tag: "new" },
+            { id: 10, title: "Mooch Beard & Hair Growth Natural Oil - 30ml", category: "cosmetics", categoryLabel: "Herbal Cosmetics", price: "₹250.00", image: "https://images.unsplash.com/photo-1626015713026-d837d172406f?auto=format&fit=crop&q=80&w=600", description: "Specially formulated for facial hair. A rich blend of Argan, Jojoba, and Cedarwood oils that nourishes beard roots, prevents beard-ruff, and promotes even, patchy-free beard growth.", tag: "new" },
+            { id: 11, title: "Lemongrass Refreshing Soap - 125g", category: "cosmetics", categoryLabel: "Herbal Cosmetics", price: "₹95.00", image: "https://images.unsplash.com/photo-1607006342411-b013522e2947?auto=format&fit=crop&q=80&w=600", description: "Handcrafted natural herbal soap made with Pure Lemongrass Essential Oil. Cleanses away dirt and impurities, acts as an antiseptic, and refreshes body and mind with its uplifting citrus aroma.", tag: "organic" },
+            { id: 12, title: "Premium Sanitary Napkins with Anion Chip (Regular - 240mm)", category: "sanitary", categoryLabel: "Sanitary Pads", price: "₹180.00", image: "https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600", description: "Features a patent Anion chip that provides antibacterial protection, odor control, and reduces menstrual discomfort. Made with premium, ultra-soft cotton surface, breathable bottom layer, and super absorbent polymers that keep you dry for up to 8 hours.", tag: "medical" },
+            { id: 13, title: "Premium Sanitary Napkins with Anion Chip (Large - 280mm)", category: "sanitary", categoryLabel: "Sanitary Pads", price: "₹220.00", image: "https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600", description: "Extra protection for heavy flow days. Includes an anion chip that prevents bacterial multiplication, controls rashes, and relieves irritation. Ultra-thin structure with side wings for leakage protection.", tag: "best seller" },
+            { id: 14, title: "Advanced Hand Sanitizer Gel - 500ml", category: "surgical", categoryLabel: "Surgical Products", price: "₹150.00", image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600", description: "Kills 99.9% germs instantly without water. Contains 75% Iso-Propyl alcohol, enriched with organic Aloe Vera extracts and Vitamin E to prevent skin dryness. Ideal for clinical and household hygiene.", tag: "medical" },
+            { id: 15, title: "Premium 3-Ply Disposable Surgical Face Masks - 50 Pcs", category: "surgical", categoryLabel: "Surgical Products", price: "₹250.00", image: "https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600", description: "High-filtration disposable masks with melt-blown filter layers. Offers excellent barrier protection against droplets, dust, and pollen. Fitted with comfortable soft ear loops and nose clip.", tag: "medical" },
+            { id: 16, title: "Amrut-jal Alkaline Water Ionizer (11-Plates)", category: "water", categoryLabel: "Water Care", price: "₹1,45,000.00", image: "https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600", description: "Premium state-of-the-art water ionizer machine equipped with 11 high-grade Platinum-coated Titanium plates. Features touch control panel, automatic cleaning cycle, and produces ionized alkaline water (pH 3.5 to 11.5) rich in antioxidants (Molecular Hydrogen) to neutralize acidic wastes in the body.", tag: "premium" }
+        ];
+
+        function sendWhatsAppInquiry(productTitle) {
+            const phoneNumber = "9924231091";
+            const text = `Hello Amrut International, I would like to inquire about: ${productTitle}. Please share more details and price. Thank you!`;
+            const url = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        function renderRelated(currentProduct) {
+            const related = productsData.filter(p => p.category === currentProduct.category && p.id !== currentProduct.id).slice(0, 4);
+            if (related.length === 0) return;
+
+            const grid = document.getElementById('related-grid');
+            const section = document.getElementById('related-section');
+            section.style.display = 'block';
+
+            related.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.style.cursor = 'pointer';
+                const tagHTML = p.tag ? `<span class="product-tag">${p.tag}</span>` : '';
+                card.innerHTML = `
+                    ${tagHTML}
+                    <div class="product-image-container">
+                        <img src="${p.image}" alt="${p.title}" class="product-image" style="max-height:160px;" onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=${encodeURIComponent(p.title)}'">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${p.categoryLabel}</span>
+                        <h3 class="product-title">${p.title}</h3>
+                        <div class="product-card-footer">
+                            <span class="product-price">${p.price}</span>
+                        </div>
+                    </div>
+                `;
+                card.addEventListener('click', () => {
+                    window.location.href = `product-detail.html?id=${p.id}`;
+                });
+                grid.appendChild(card);
+            });
+        }
+
+        function renderProductDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const id = parseInt(params.get('id'));
+            const product = productsData.find(p => p.id === id);
+            const layout = document.getElementById('pd-layout');
+            const breadcrumbName = document.getElementById('pd-breadcrumb-name');
+
+            if (!product) {
+                layout.innerHTML = `
+                    <div class="pd-not-found" style="grid-column:1/-1;">
+                        <i class="fa-solid fa-box-open"></i>
+                        <h2>Product Not Found</h2>
+                        <p>The product you're looking for doesn't exist or may have been removed.</p>
+                        <a href="products.html" class="btn btn-primary" style="margin-top:1.5rem; display:inline-flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
+                    </div>`;
+                return;
+            }
+
+            // Update page title & breadcrumb
+            document.title = `${product.title} - Amrut International`;
+            if (breadcrumbName) breadcrumbName.textContent = product.title.length > 40 ? product.title.substring(0, 40) + '...' : product.title;
+
+            const tagHTML = product.tag ? `<span class="pd-tag">${product.tag}</span>` : '';
+            const hoverThumbHTML = product.hoverImage ? `
+                <div class="pd-thumb" onclick="swapImage('${product.hoverImage}', this)">
+                    <img src="${product.hoverImage}" alt="${product.title} view 2" onerror="this.parentElement.style.display='none'">
+                </div>` : '';
+
+            layout.innerHTML = `
+                <!-- Gallery -->
+                <div class="pd-gallery">
+                    <div class="pd-main-image-box">
+                        <img src="${product.image}" alt="${product.title}" class="pd-main-img" id="pd-main-img"
+                            onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=${encodeURIComponent(product.title)}'">
+                    </div>
+                    <div class="pd-hover-thumb-row">
+                        <div class="pd-thumb active" onclick="swapImage('${product.image}', this)">
+                            <img src="${product.image}" alt="${product.title}" onerror="this.parentElement.style.display='none'">
+                        </div>
+                        ${hoverThumbHTML}
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="pd-info">
+                    <span class="pd-category-badge">
+                        <i class="fa-solid fa-tag"></i> ${product.categoryLabel}
+                    </span>
+
+                    <h1 class="pd-title">${product.title}</h1>
+
+                    ${product.tag ? `<div class="pd-tag-row">${tagHTML}</div>` : ''}
+
+                    <div class="pd-price-box">
+                        <span class="pd-price">${product.price}</span>
+                        <span class="pd-price-note">/ unit (Wholesale price on request)</span>
+                    </div>
+
+                    <div class="pd-availability">
+                        <i class="fa-solid fa-circle-check"></i>
+                        In Stock — Available for Export &amp; Wholesale
+                    </div>
+
+                    <div class="pd-divider"></div>
+
+                    <p class="pd-description">${product.description}</p>
+
+                    <div class="pd-actions">
+                        <button class="pd-btn-whatsapp" onclick="sendWhatsAppInquiry('${product.title.replace(/'/g, "\\'")}')">
+                            <i class="fa-brands fa-whatsapp"></i> Inquire on WhatsApp
+                        </button>
+                        <a href="contact.html" class="pd-btn-contact">
+                            <i class="fa-solid fa-envelope"></i> Contact Us
+                        </a>
+                    </div>
+
+                    <div class="pd-meta-grid">
+                        <div class="pd-meta-item">
+                            <span class="pd-meta-label">Manufacturer</span>
+                            <span class="pd-meta-value">Amrut International, Surat</span>
+                        </div>
+                        <div class="pd-meta-item">
+                            <span class="pd-meta-label">Category</span>
+                            <span class="pd-meta-value">${product.categoryLabel}</span>
+                        </div>
+                        <div class="pd-meta-item">
+                            <span class="pd-meta-label">Availability</span>
+                            <span class="pd-meta-value" style="color:#2e7d32;">In Stock</span>
+                        </div>
+                        <div class="pd-meta-item">
+                            <span class="pd-meta-label">Supply Type</span>
+                            <span class="pd-meta-value">Export &amp; Wholesale</span>
+                        </div>
+                        <div class="pd-meta-item">
+                            <span class="pd-meta-label">Origin</span>
+                            <span class="pd-meta-value">India (GMP Certified)</span>
+                        </div>
+                        <div class="pd-meta-item">
+                            <span class="pd-meta-label">Min. Order</span>
+                            <span class="pd-meta-value">Contact for MOQ</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            renderRelated(product);
+        }
+
+        function swapImage(src, thumbEl) {
+            const mainImg = document.getElementById('pd-main-img');
+            if (!mainImg) return;
+            mainImg.style.opacity = '0';
+            mainImg.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+                mainImg.style.transform = 'scale(1)';
+            }, 200);
+            // Update active thumb
+            document.querySelectorAll('.pd-thumb').forEach(t => t.classList.remove('active'));
+            thumbEl.classList.add('active');
+        }
+
+        // Initialize on load
+        renderProductDetail();
+    </script>
+
+</body>
+</html>
+

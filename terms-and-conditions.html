@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - Amrut International</title>
+    <meta name="description" content="Read the Terms and Conditions of Amrut International governing the use of our website, products, wholesale trade, and export services from Surat, Gujarat, India.">
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* ===== LEGAL PAGE STYLES ===== */
+        .legal-wrapper {
+            padding: 5rem 0 7rem;
+            background: linear-gradient(180deg, #f5f9f8 0%, #ffffff 50%);
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .legal-toc {
+            position: sticky;
+            top: 100px;
+            background: white;
+            border-radius: 16px;
+            padding: 1.75rem;
+            border: 1px solid rgba(46,82,74,0.1);
+            box-shadow: 0 4px 20px rgba(46,82,74,0.06);
+        }
+
+        .legal-toc-title {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--primary-color);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(46,82,74,0.1);
+        }
+
+        .legal-toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .legal-toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+        }
+
+        .legal-toc-list a:hover {
+            color: var(--primary-color);
+            background: rgba(46,82,74,0.06);
+        }
+
+        .legal-toc-list a i {
+            font-size: 0.55rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .legal-updated-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(46,82,74,0.08);
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            margin-bottom: 1.25rem;
+        }
+
+        .legal-content {
+            max-width: 820px;
+        }
+
+        .legal-content h1 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .legal-intro {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .legal-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 110px;
+        }
+
+        .legal-section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .legal-section-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(46,82,74,0.1), rgba(14,77,39,0.08));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .legal-section h2 {
+            font-size: 1.25rem;
+            font-family: var(--font-body);
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 0;
+        }
+
+        .legal-section p {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .legal-section ul, .legal-section ol {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-section ul li, .legal-section ol li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 0.94rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .legal-section ul li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            margin-top: 0.55rem;
+            flex-shrink: 0;
+        }
+
+        .legal-section ol {
+            counter-reset: legal-counter;
+        }
+
+        .legal-section ol li {
+            counter-increment: legal-counter;
+        }
+
+        .legal-section ol li::before {
+            content: counter(legal-counter);
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .legal-highlight {
+            background: linear-gradient(135deg, rgba(46,82,74,0.06), rgba(14,77,39,0.04));
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.94rem;
+            line-height: 1.75;
+            color: var(--primary-dark);
+        }
+
+        .legal-highlight.caution {
+            border-left-color: #e67e22;
+            background: linear-gradient(135deg, rgba(230,126,34,0.06), rgba(230,126,34,0.03));
+        }
+
+        .legal-contact-box {
+            background: linear-gradient(135deg, #1e3d36 0%, #2E524A 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .legal-contact-box h3 {
+            color: white;
+            font-family: var(--font-body);
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+        }
+
+        .legal-contact-box p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.87rem;
+            margin: 0;
+        }
+
+        .legal-contact-box a {
+            background: white;
+            color: var(--primary-color);
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.87rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .legal-contact-box a:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .legal-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-color), transparent);
+            margin: 2.5rem 0;
+        }
+
+        @media (max-width: 900px) {
+            .legal-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .legal-toc {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================================
+         TOP BAR
+         ========================================== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="tel:+919879063240" class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</a>
+                <a href="mailto:amrutinternational2017@gmail.com" class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://maps.google.com/?q=Surat,+Gujarat,+India" target="_blank" class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         HEADER / NAVIGATION
+         ========================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Amrut International Logo">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Our Company <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="about-us.html">About Us</a></li>
+                            <li class="dropdown-item"><a href="our-history.html">Our History</a></li>
+                            <li class="dropdown-item"><a href="certificates.html">Certificates</a></li>
+                            <li class="dropdown-item"><a href="faqs.html">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="our-team.html" class="nav-link">Our Team</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+                        <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+            <button class="mobile-menu-btn" title="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         BREADCRUMB HERO
+         ========================================== -->
+    <div class="breadcrumb-hero"
+        style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200');">
+        <div class="container">
+            <h1>Terms &amp; Conditions</h1>
+            <div class="breadcrumb-list">
+                <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-item active" style="color: white;">Terms &amp; Conditions</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         TERMS & CONDITIONS CONTENT
+         ========================================== -->
+    <section class="legal-wrapper">
+        <div class="container">
+            <div class="legal-grid">
+
+                <!-- Table of Contents Sidebar -->
+                <aside class="legal-toc">
+                    <p class="legal-toc-title"><i class="fa-solid fa-list-ul" style="margin-right:6px;"></i> Contents</p>
+                    <ul class="legal-toc-list">
+                        <li><a href="#tc-acceptance"><i class="fa-solid fa-circle"></i> Acceptance of Terms</a></li>
+                        <li><a href="#tc-use"><i class="fa-solid fa-circle"></i> Use of Website</a></li>
+                        <li><a href="#tc-products"><i class="fa-solid fa-circle"></i> Products &amp; Services</a></li>
+                        <li><a href="#tc-orders"><i class="fa-solid fa-circle"></i> Orders &amp; Payments</a></li>
+                        <li><a href="#tc-export"><i class="fa-solid fa-circle"></i> Export &amp; Trade</a></li>
+                        <li><a href="#tc-ip"><i class="fa-solid fa-circle"></i> Intellectual Property</a></li>
+                        <li><a href="#tc-disclaimer"><i class="fa-solid fa-circle"></i> Disclaimers</a></li>
+                        <li><a href="#tc-liability"><i class="fa-solid fa-circle"></i> Limitation of Liability</a></li>
+                        <li><a href="#tc-indemnity"><i class="fa-solid fa-circle"></i> Indemnification</a></li>
+                        <li><a href="#tc-governing"><i class="fa-solid fa-circle"></i> Governing Law</a></li>
+                        <li><a href="#tc-changes"><i class="fa-solid fa-circle"></i> Changes to Terms</a></li>
+                        <li><a href="#tc-contact"><i class="fa-solid fa-circle"></i> Contact Us</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="legal-content">
+                    <span class="legal-updated-pill"><i class="fa-regular fa-calendar"></i> Last Updated: June 26, 2026</span>
+                    <h1>Terms &amp; Conditions</h1>
+                    <p class="legal-intro">
+                        Welcome to <strong>Amrut International</strong>. These Terms and Conditions ("Terms") govern your use of our website located at <strong>amrutinternational.com</strong> ("Website") and your engagement with our products and services. By accessing or using our Website, placing wholesale or export inquiries, or purchasing our products, you agree to be bound by these Terms. If you do not agree, please refrain from using our Website.
+                    </p>
+
+                    <!-- Section 1 -->
+                    <div class="legal-section" id="tc-acceptance">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <h2>1. Acceptance of Terms</h2>
+                        </div>
+                        <p>By using this Website, you confirm that you are at least 18 years of age, have read and understood these Terms, and agree to comply with them. These Terms constitute a legally binding agreement between you ("User") and Amrut International ("Company," "we," "our," or "us").</p>
+                        <div class="legal-highlight">
+                            <strong>Important:</strong> These Terms apply to all visitors, wholesale buyers, export clients, distributors, and any other users who access or use our Website or services.
+                        </div>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 2 -->
+                    <div class="legal-section" id="tc-use">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-globe"></i></div>
+                            <h2>2. Use of Website</h2>
+                        </div>
+                        <p>You agree to use our Website only for lawful purposes and in a manner that does not infringe the rights of others. You must not:</p>
+                        <ul>
+                            <li>Use the Website in any way that violates applicable local, national, or international law or regulation.</li>
+                            <li>Transmit any unsolicited or unauthorized advertising or promotional material (spam).</li>
+                            <li>Attempt to gain unauthorized access to any part of our Website, servers, databases, or connected systems.</li>
+                            <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Website.</li>
+                            <li>Use automated tools (bots, scrapers) to extract content or data from the Website without our written consent.</li>
+                            <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity.</li>
+                        </ul>
+                        <p>We reserve the right to restrict access to the Website for any user who violates these Terms, at our sole discretion and without notice.</p>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 3 -->
+                    <div class="legal-section" id="tc-products">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-box-open"></i></div>
+                            <h2>3. Products &amp; Services</h2>
+                        </div>
+                        <p>Amrut International manufactures and supplies Ayurvedic wellness products, herbal cosmetics, sanitary pads, surgical products, and water care solutions for domestic and international markets. The information presented on our Website, including product descriptions, images, and pricing, is for informational purposes only.</p>
+                        <ul>
+                            <li>Product specifications, formulations, and pricing are subject to change without prior notice.</li>
+                            <li>Product images are illustrative. Actual packaging may differ slightly from images shown.</li>
+                            <li>All products are manufactured in compliance with applicable Indian regulatory standards (AYUSH, GMP, ISI where applicable).</li>
+                            <li>Ayurvedic and herbal products are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before use.</li>
+                        </ul>
+                        <div class="legal-highlight caution">
+                            <strong>Health Disclaimer:</strong> Amrut International's Ayurvedic and nutraceutical products are dietary supplements and traditional preparations. They are not substitutes for medical treatment. Results may vary by individual.
+                        </div>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 4 -->
+                    <div class="legal-section" id="tc-orders">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                            <h2>4. Orders &amp; Payments</h2>
+                        </div>
+                        <p>Amrut International primarily operates on a B2B (business-to-business) basis, catering to wholesale distributors, export buyers, and private label clients. The following conditions apply to all business transactions:</p>
+                        <ol>
+                            <li>All orders are subject to availability and acceptance by Amrut International.</li>
+                            <li>A formal quotation or purchase order confirmation in writing is required before any supply is initiated.</li>
+                            <li>Minimum order quantities (MOQ) apply and vary by product category — contact our sales team for details.</li>
+                            <li>Payment terms are as agreed in writing between both parties prior to order processing. Standard terms may include advance payment, Letter of Credit (LC), or other mutually agreed structures.</li>
+                            <li>All prices quoted are exclusive of applicable taxes, duties, shipping, and insurance unless otherwise specified in writing.</li>
+                            <li>We reserve the right to cancel orders if payment terms are not met within the agreed timeframe.</li>
+                        </ol>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 5 -->
+                    <div class="legal-section" id="tc-export">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-ship"></i></div>
+                            <h2>5. Export &amp; International Trade</h2>
+                        </div>
+                        <p>As a registered Indian exporter, Amrut International complies with all applicable export regulations under the Foreign Trade Policy of India and the regulations of the importing country. Buyers are responsible for:</p>
+                        <ul>
+                            <li>Ensuring compliance with the import regulations, customs duties, and labeling requirements of their country.</li>
+                            <li>Obtaining all necessary import licenses, permits, or regulatory approvals required in the destination country.</li>
+                            <li>Verifying that the products are legally permissible for import and sale in their jurisdiction.</li>
+                        </ul>
+                        <p>Amrut International shall not be liable for delays, confiscations, or rejections caused by the buyer's failure to comply with local import regulations.</p>
+                        <div class="legal-highlight">
+                            <strong>Private Label Services:</strong> Custom branding and private label manufacturing are available under separate contractual agreements, subject to agreed terms, MOQs, and lead times.
+                        </div>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 6 -->
+                    <div class="legal-section" id="tc-ip">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-regular fa-copyright"></i></div>
+                            <h2>6. Intellectual Property</h2>
+                        </div>
+                        <p>All content on this Website — including but not limited to logos, brand names, text, images, product designs, graphics, icons, and software — is the exclusive property of Amrut International or its licensors, and is protected by Indian and international intellectual property laws.</p>
+                        <ul>
+                            <li>You may not copy, reproduce, distribute, or modify any content from this Website without our express written permission.</li>
+                            <li>Trademarks and trade names of Amrut International may not be used in connection with any product or service that is not ours, in any manner that is likely to cause confusion.</li>
+                            <li>Unauthorized use of our intellectual property may result in legal action.</li>
+                        </ul>
+                        <p>You are granted a limited, non-exclusive, non-transferable license to access and use the Website for personal or business reference purposes only.</p>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 7 -->
+                    <div class="legal-section" id="tc-disclaimer">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <h2>7. Disclaimers</h2>
+                        </div>
+                        <p>The Website and its content are provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied, including but not limited to:</p>
+                        <ul>
+                            <li>Warranties of merchantability or fitness for a particular purpose.</li>
+                            <li>Accuracy, completeness, or reliability of any information on the Website.</li>
+                            <li>Uninterrupted, secure, or error-free operation of the Website.</li>
+                        </ul>
+                        <p>We do not warrant that the Website will be free from viruses or other harmful components. You are responsible for ensuring appropriate protection of your device and data.</p>
+                        <div class="legal-highlight caution">
+                            <strong>Medical Disclaimer:</strong> Information on this Website is not intended as medical advice. Always consult a licensed healthcare professional before starting any health supplement or Ayurvedic product.
+                        </div>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 8 -->
+                    <div class="legal-section" id="tc-liability">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                            <h2>8. Limitation of Liability</h2>
+                        </div>
+                        <p>To the fullest extent permitted by applicable law, Amrut International shall not be liable for:</p>
+                        <ul>
+                            <li>Any indirect, incidental, special, consequential, or punitive damages arising from your use of our Website or products.</li>
+                            <li>Loss of profits, data, goodwill, or business opportunities arising from reliance on information provided on our Website.</li>
+                            <li>Damages resulting from unauthorized access to or alteration of your data or transmissions.</li>
+                            <li>Delays, disruptions, or failures in supply arising from force majeure events including natural disasters, pandemics, government restrictions, or industrial disputes.</li>
+                        </ul>
+                        <p>Our total liability for any claim arising under or related to these Terms shall not exceed the amount paid (if any) for the specific products or services giving rise to the claim.</p>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 9 -->
+                    <div class="legal-section" id="tc-indemnity">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-umbrella"></i></div>
+                            <h2>9. Indemnification</h2>
+                        </div>
+                        <p>You agree to indemnify, defend, and hold harmless Amrut International, its directors, officers, employees, agents, and licensors from and against all claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or related to:</p>
+                        <ul>
+                            <li>Your breach of these Terms or any applicable law or regulation.</li>
+                            <li>Your misuse or unauthorized use of the Website or any product.</li>
+                            <li>Any claim by a third party arising from your actions or omissions in connection with the use of our products or Website.</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 10 -->
+                    <div class="legal-section" id="tc-governing">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-gavel"></i></div>
+                            <h2>10. Governing Law &amp; Jurisdiction</h2>
+                        </div>
+                        <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>Republic of India</strong>. Any disputes arising out of or relating to these Terms or your use of the Website shall be subject to the exclusive jurisdiction of the competent courts in <strong>Surat, Gujarat, India</strong>.</p>
+                        <p>For international clients, disputes that cannot be resolved amicably may be referred to arbitration under the Arbitration and Conciliation Act, 1996 of India, with the seat of arbitration being Surat, Gujarat.</p>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 11 -->
+                    <div class="legal-section" id="tc-changes">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-file-pen"></i></div>
+                            <h2>11. Changes to These Terms</h2>
+                        </div>
+                        <p>We reserve the right to modify these Terms at any time. Updated Terms will be posted on this page with a revised "Last Updated" date. Your continued use of the Website after such changes constitutes your acceptance of the new Terms. We encourage you to review these Terms periodically.</p>
+                        <p>If we make material changes that significantly affect your rights, we will make reasonable efforts to notify you (e.g., via email or a prominent notice on the Website).</p>
+                    </div>
+
+                    <div class="legal-divider"></div>
+
+                    <!-- Section 12 -->
+                    <div class="legal-section" id="tc-contact">
+                        <div class="legal-section-header">
+                            <div class="legal-section-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                            <h2>12. Contact Us</h2>
+                        </div>
+                        <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+                        <ul>
+                            <li><strong>Company:</strong> Amrut International</li>
+                            <li><strong>Address:</strong> Surat, Gujarat, India</li>
+                            <li><strong>Email:</strong> amrutinternational2017@gmail.com</li>
+                            <li><strong>Phone:</strong> +91 98790 63240</li>
+                            <li><strong>WhatsApp (Export):</strong> +91 98790 63240</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact CTA -->
+                    <div class="legal-contact-box">
+                        <div>
+                            <h3>Questions About Our Terms?</h3>
+                            <p>Our team is happy to clarify any terms or discuss trade agreements with you.</p>
+                        </div>
+                        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+                    </div>
+
+                    <!-- Related links -->
+                    <p style="margin-top:2rem; font-size:0.85rem; color:var(--text-muted); text-align:center;">
+                        Also read our
+                        <a href="privacy-policy.html" style="color:var(--primary-color); font-weight:600;">Privacy Policy</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer-wave-wrapper">
+            <svg class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-bg" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="rgba(46, 82, 74, 0.15)"></path>
+                <path class="wave-fg" d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,42.7C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#1e3d36"></path>
+            </svg>
+        </div>
+        <div class="footer-particles">
+            <span class="particle particle-1"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-2"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-3"><i class="fa-solid fa-droplet"></i></span>
+            <span class="particle particle-4"><i class="fa-solid fa-leaf"></i></span>
+            <span class="particle particle-5"><i class="fa-solid fa-circle"></i></span>
+            <span class="particle particle-6"><i class="fa-solid fa-leaf"></i></span>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>COMPANY</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="our-team.html">Our Team</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>DISCOVER</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms and conditions</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-middle">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="Amrut International Logo">
+                    </div>
+                    <p class="footer-desc">Amrut International is a world renowned product, Supplier &amp; Exporter of Ayurveda product, Beauty &amp; Hygiene Product and related herbal preparations.</p>
+                    <div class="footer-certifications">
+                        <img src="assets/images/certifications.png" alt="Compliance Certifications">
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>SIGN UP AND SAVE</h3>
+                    <p class="subscribe-text">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                    <form class="subscribe-form" onsubmit="alert('Thank you for subscribing!'); this.reset(); return false;">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn" aria-label="Subscribe"><i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Amrut International Copyright &copy; 2024, Design By <a href="https://shopnoecommerce.com/" target="_blank" class="shopno-link">SHOPNO ECOMMERCE PVT LTD</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-widget">
+        <button class="whatsapp-trigger-btn" title="Chat with us on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+        <div class="whatsapp-box">
+            <div class="whatsapp-box-header">
+                <i class="fa-brands fa-whatsapp" style="font-size: 2.2rem; color: #25d366;"></i>
+                <div><h3>Start a Conversation</h3><p>Typically replies in minutes</p></div>
+            </div>
+            <div class="whatsapp-box-body">
+                <a href="https://wa.me/919924231091" target="_blank" class="whatsapp-agent-card">
+                    <div class="whatsapp-agent-info">
+                        <div class="whatsapp-agent-avatar">TS</div>
+                        <div class="whatsapp-agent-details"><h4>Team Sales</h4><p>Domestic Inquiries</p></div>
+                    </div>
+                    <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
+                </a>
+                <a href="https://wa.me/919879063240" target="_blank" class="whatsapp-agent-card">
+                    <div class="whatsapp-agent-info">
+                        <div class="whatsapp-agent-avatar">EH</div>
+                        <div class="whatsapp-agent-details"><h4>Export Head</h4><p>International Business</p></div>
+                    </div>
+                    <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -56,110 +56,133 @@
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
-            <div class="hero-actions">
+                        <div class="hero-actions">
                 <a href="contact.html" class="btn btn-primary">Contact Us</a>
             </div>
+            <button class="mobile-menu-btn" title="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
 
     <!-- ==========================================
          BLOG HERO BANNER
          ========================================== -->
-    <section class="blog-header">
+    <div class="breadcrumb-hero"
+        style="background-image: url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&q=80&w=1400');">
         <div class="container">
             <h1>Our Wellness Blog</h1>
-            <p>Read about natural ingredients, skincare formulations, and healthy habits.</p>
-            <div class="breadcrumbs">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <span>Blog</span>
+            <p class="breadcrumb-hero-subtitle">Explore natural ingredients, Ayurvedic formulations &amp; wellness insights</p>
+            <div class="breadcrumb-list">
+                <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-item active" style="color: white;">Blog</span>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- ==========================================
          MAIN BLOG LAYOUT
          ========================================== -->
-    <div class="container">
-        <div class="blog-layout">
-            
-            <!-- Main Content Area -->
-            <main>
-                <!-- Filters Bar -->
-                <div class="blog-filters">
-                    <button class="filter-btn active" onclick="filterBlog('all', this)">All Articles</button>
-                    <button class="filter-btn" onclick="filterBlog('cosmetic', this)">Cosmetics</button>
-                    <button class="filter-btn" onclick="filterBlog('health', this)">Health & Wellness</button>
-                </div>
+    <div class="blog-page-wrapper">
+        <div class="container">
 
-                <!-- Grid of Blog Posts -->
-                <div class="blog-posts-grid" id="blog-grid">
-                    
-                    <!-- Post 1 -->
-                    <article class="blog-card-new" data-category="cosmetic">
-                        <div class="blog-card-img-wrapper">
-                            <span class="blog-card-badge">Cosmetic</span>
-                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400" alt="Ayurvedic Treatment">
-                        </div>
-                        <div class="blog-card-new-body">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> June 24, 2026</span>
-                                <span><i class="fa-regular fa-clock"></i> 5 Mins Read</span>
-                            </div>
-                            <h3 class="blog-card-title-new">Experiencia completa y segura con cosméticos y Ayurveda</h3>
-                            <p class="blog-excerpt">Explore the deep history of organic skincare cosmetics and how traditional Ayurvedic herbs maintain skin wellness and vitality naturally...</p>
-                            <a href="blog-detail-1.html" class="blog-read-btn">Read Full Article <i class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </article>
+            <!-- Section Heading -->
+            <div class="blog-section-heading">
+                <span class="blog-tag-line"><i class="fa-solid fa-leaf"></i> Wellness Insights</span>
+                <h2>Latest Articles &amp; Updates</h2>
+                <p>Stay informed with our expert knowledge on Ayurveda, natural cosmetics, and holistic health.</p>
+            </div>
 
-                    <!-- Post 2 -->
-                    <article class="blog-card-new" data-category="cosmetic">
-                        <div class="blog-card-img-wrapper">
-                            <span class="blog-card-badge">Cosmetic</span>
-                            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=400" alt="Onion oil extract">
-                        </div>
-                        <div class="blog-card-new-body">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> June 20, 2026</span>
-                                <span><i class="fa-regular fa-clock"></i> 4 Mins Read</span>
-                            </div>
-                            <h3 class="blog-card-title-new">How Red Onion Hair Oil Accelerates Growth</h3>
-                            <p class="blog-excerpt">Red onion extract is rich in sulfur, which helps reduce breakage, strengthens roots, and prevents hair thinning. Learn how to incorporate...</p>
-                            <a href="blog-detail-2.html" class="blog-read-btn">Read Full Article <i class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </article>
+            <!-- Filters Bar -->
+            <div class="blog-filters">
+                <button class="filter-btn active" onclick="filterBlog('all', this)"><i class="fa-solid fa-border-all"></i> All Articles</button>
+                <button class="filter-btn" onclick="filterBlog('cosmetic', this)"><i class="fa-solid fa-spa"></i> Cosmetics</button>
+                <button class="filter-btn" onclick="filterBlog('health', this)"><i class="fa-solid fa-seedling"></i> Health &amp; Wellness</button>
+            </div>
 
-                    <!-- Post 3 -->
-                    <article class="blog-card-new" data-category="health">
-                        <div class="blog-card-img-wrapper">
-                            <span class="blog-card-badge">Health</span>
-                            <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=400" alt="Moringa Capsules">
+            <!-- Grid of Blog Posts -->
+            <div class="blog-posts-grid" id="blog-grid">
+
+                <!-- Post 1 - Featured -->
+                <article class="blog-card-new " data-category="cosmetic">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-card-badge">Cosmetic</span>
+                        <span class="blog-card-featured-tag"><i class="fa-solid fa-star"></i> Featured</span>
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800" alt="Ayurvedic Treatment">
+                        <div class="blog-card-img-overlay"></div>
+                    </div>
+                    <div class="blog-card-new-body">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> June 24, 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 5 Mins Read</span>
                         </div>
-                        <div class="blog-card-new-body">
-                            <div class="blog-meta">
-                                <span><i class="fa-regular fa-calendar"></i> June 15, 2026</span>
-                                <span><i class="fa-regular fa-clock"></i> 6 Mins Read</span>
-                            </div>
-                            <h3 class="blog-card-title-new">Moringa: The Miraculous Multi-Vitamin Tree</h3>
-                            <p class="blog-excerpt">Loaded with vitamins A, C, and E, potassium, and calcium, Moringa Oleifera is a superfood that supports energy levels, immunity, and skin health...</p>
-                            <a href="blog-detail-3.html" class="blog-read-btn">Read Full Article <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <h3 class="blog-card-title-new">Experiencia completa y segura con cosméticos y Ayurveda</h3>
+                        <p class="blog-excerpt">Explore the deep history of organic skincare cosmetics and how traditional Ayurvedic herbs maintain skin wellness and vitality naturally. Discover the ancient secrets behind modern beauty...</p>
+                        <a href="blog-detail-1.html" class="blog-read-btn">Read Full Article <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="blog-card-new" data-category="cosmetic">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-card-badge">Cosmetic</span>
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600" alt="Onion oil extract">
+                        <div class="blog-card-img-overlay"></div>
+                    </div>
+                    <div class="blog-card-new-body">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> June 20, 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 4 Mins Read</span>
                         </div>
-                    </article>
+                        <h3 class="blog-card-title-new">How Red Onion Hair Oil Accelerates Growth</h3>
+                        <p class="blog-excerpt">Red onion extract is rich in sulfur, which helps reduce breakage and prevents thinning. Learn how to incorporate it into your routine...</p>
+                        <a href="blog-detail-2.html" class="blog-read-btn">Read Full Article <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>
 
-                </div>
+                <!-- Post 3 -->
+                <article class="blog-card-new" data-category="health">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-card-badge badge-health">Health</span>
+                        <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600" alt="Moringa Capsules">
+                        <div class="blog-card-img-overlay"></div>
+                    </div>
+                    <div class="blog-card-new-body">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> June 15, 2026</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 Mins Read</span>
+                        </div>
+                        <h3 class="blog-card-title-new">Moringa: The Miraculous Multi-Vitamin Tree</h3>
+                        <p class="blog-excerpt">Loaded with vitamins A, C, and E, potassium, and calcium, Moringa Oleifera is a superfood that supports energy levels and immunity...</p>
+                        <a href="blog-detail-3.html" class="blog-read-btn">Read Full Article <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>
 
-                <!-- Pagination -->
-                <!-- <div class="pagination">
-                    <button class="page-link-btn active">1</button>
-                    <button class="page-link-btn">2</button>
-                    <button class="page-link-btn"><i class="fa-solid fa-angle-right"></i></button>
-                </div> -->
-            </main>
+            </div>
 
-            <!-- Sidebar -->
-         
         </div>
     </div>
+
+    <!-- ==========================================
+         NEWSLETTER CTA STRIP
+         ========================================== -->
+    <section class="blog-newsletter-cta">
+        <div class="container">
+            <div class="blog-newsletter-inner">
+                <div class="blog-newsletter-text">
+                    <span class="blog-tag-line" style="color: rgba(255,255,255,0.75);"><i class="fa-solid fa-envelope-open-text"></i> Stay in the Loop</span>
+                    <h2>Get Wellness Tips in Your Inbox</h2>
+                    <p>Subscribe to our blog and receive the latest Ayurvedic health tips, product launches, and natural beauty secrets — directly to your inbox.</p>
+                </div>
+                <form class="blog-newsletter-form" onsubmit="alert('Thank you for subscribing!'); this.reset(); return false;">
+                    <div class="blog-newsletter-input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                    <p class="blog-newsletter-note"><i class="fa-solid fa-shield-halved"></i> No spam, ever. Unsubscribe at any time.</p>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- ==========================================
          FOOTER SECTION
@@ -199,8 +222,8 @@
                 <div class="footer-column">
                     <h3>DISCOVER</h3>
                     <ul class="footer-links-list">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms and conditions</a></li>
                         <li><a href="blog.html">BLOG</a></li>
                         <li><a href="faqs.html">FAQs</a></li>
                     </ul>
@@ -323,3 +346,4 @@
 </body>
 
 </html>
+
