@@ -381,6 +381,182 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Custom WhatsApp Inquiry & Badge Styling */
+        .pd-availability-badge {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+        .whatsapp-inquiry-card {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            background: #ffffff;
+            border: 1px solid rgba(46,82,74,0.12);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            max-width: 480px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+        .whatsapp-card-icon {
+            font-size: 2.5rem;
+            color: #25d366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .whatsapp-card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .whatsapp-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .whatsapp-card-name {
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 0.95rem;
+        }
+        .whatsapp-card-badge {
+            background: #25d366;
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .whatsapp-card-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 0.6rem 1.25rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid #20ba5a;
+            width: fit-content;
+            box-shadow: 0 4px 10px rgba(37,211,102,0.15);
+        }
+        .whatsapp-card-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 15px rgba(37,211,102,0.25);
+        }
+        .whatsapp-card-note {
+            color: #e53e3e;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-top: 0.1rem;
+        }
+
+        /* Dark Green Related Products Styling */
+        .related-section {
+            background: #1e3d36 !important;
+            color: #ffffff;
+            border-top: none;
+            position: relative;
+        }
+        .related-heading h2 {
+            color: #ffffff !important;
+        }
+        .related-heading p {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        .related-heading .blog-tag-line {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        .related-section .product-card {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            color: #ffffff;
+        }
+        .related-section .product-image-container {
+            background: white !important;
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .related-section .product-image {
+            max-height: 170px !important;
+            object-fit: contain;
+        }
+        .related-section .product-title {
+            color: #ffffff !important;
+            font-size: 0.95rem;
+            margin-top: 0.75rem;
+            font-weight: 600;
+            line-height: 1.4;
+            text-align: left;
+        }
+        .related-section .product-info {
+            padding: 0.5rem 0 0 0 !important;
+        }
+        .related-section .product-category {
+            display: none !important;
+        }
+        /* Slider indicators/arrows styling */
+        .related-grid-wrapper {
+            position: relative;
+        }
+        .related-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e3d36;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            z-index: 10;
+            border: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .related-arrow:hover {
+            background: #eef3f1;
+            transform: translateY(-50%) scale(1.05);
+        }
+        .related-arrow.left-arrow {
+            left: -20px;
+        }
+        .related-arrow.right-arrow {
+            right: -20px;
+        }
+        @media (max-width: 1024px) {
+            .related-arrow {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -616,6 +792,23 @@
             const section = document.getElementById('related-section');
             section.style.display = 'block';
 
+            // Wrap grid in a wrapper to support arrow positioning
+            const wrapper = document.createElement('div');
+            wrapper.className = 'related-grid-wrapper';
+            grid.parentNode.insertBefore(wrapper, grid);
+            wrapper.appendChild(grid);
+
+            // Add navigation arrows
+            const leftArrow = document.createElement('button');
+            leftArrow.className = 'related-arrow left-arrow';
+            leftArrow.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+            wrapper.appendChild(leftArrow);
+
+            const rightArrow = document.createElement('button');
+            rightArrow.className = 'related-arrow right-arrow';
+            rightArrow.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+            wrapper.appendChild(rightArrow);
+
             related.forEach(p => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
@@ -627,11 +820,7 @@
                         <img src="${p.image}" alt="${p.title}" class="product-image" style="max-height:160px;" onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=${encodeURIComponent(p.title)}'">
                     </div>
                     <div class="product-info">
-                        <span class="product-category">${p.categoryLabel}</span>
                         <h3 class="product-title">${p.title}</h3>
-                        <div class="product-card-footer">
-                            <span class="product-price">${p.price}</span>
-                        </div>
                     </div>
                 `;
                 card.addEventListener('click', () => {
@@ -690,38 +879,47 @@
 
                 <!-- Info -->
                 <div class="pd-info">
-                    <span class="pd-category-badge">
-                        <i class="fa-solid fa-tag"></i> ${product.categoryLabel}
-                    </span>
+                    <h1 class="pd-title" style="margin-bottom: 0.5rem;">${product.title}</h1>
 
-                    <h1 class="pd-title">${product.title}</h1>
+                    <div class="pd-availability-badge">Instock</div>
 
-                    ${product.tag ? `<div class="pd-tag-row">${tagHTML}</div>` : ''}
+                    <p class="pd-description" style="margin-top: 1rem; margin-bottom: 2rem;">${product.description}</p>
 
-                    <div class="pd-price-box">
-                        <span class="pd-price">${product.price}</span>
-                        <span class="pd-price-note">/ unit (Wholesale price on request)</span>
+                    <!-- WhatsApp Inquiry Cards -->
+                    <div class="whatsapp-inquiry-card">
+                        <div class="whatsapp-card-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="whatsapp-card-content">
+                            <div class="whatsapp-card-header">
+                                <span class="whatsapp-card-name">Amrut International (India)</span>
+                                <span class="whatsapp-card-badge">Online</span>
+                            </div>
+                            <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20${encodeURIComponent(product.title)}.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
+                            </a>
+                            <div class="whatsapp-card-note">Call for bulk query</div>
+                        </div>
                     </div>
 
-                    <div class="pd-availability">
-                        <i class="fa-solid fa-circle-check"></i>
-                        In Stock — Available for Export &amp; Wholesale
+                    <div class="whatsapp-inquiry-card" style="background: #25d366; border-color: #20ba5a; color: #ffffff;">
+                        <div class="whatsapp-card-icon" style="color: #ffffff;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="whatsapp-card-content">
+                            <div class="whatsapp-card-header">
+                                <span class="whatsapp-card-name" style="color: #ffffff;">Amrut International (Online)</span>
+                                <span class="whatsapp-card-badge" style="background: #ffffff; color: #25d366;">Online</span>
+                            </div>
+                            <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20${encodeURIComponent(product.title)}.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background: #ffffff; color: #25d366; border-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                                <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> Need help? Chat via WhatsApp
+                            </a>
+                        </div>
                     </div>
 
                     <div class="pd-divider"></div>
 
-                    <p class="pd-description">${product.description}</p>
-
-                    <div class="pd-actions">
-                        <button class="pd-btn-whatsapp" onclick="sendWhatsAppInquiry('${product.title.replace(/'/g, "\\'")}')">
-                            <i class="fa-brands fa-whatsapp"></i> Inquire on WhatsApp
-                        </button>
-                        <a href="contact.html" class="pd-btn-contact">
-                            <i class="fa-solid fa-envelope"></i> Contact Us
-                        </a>
-                    </div>
-
-                    <div class="pd-meta-grid">
+                    <div class="pd-meta-grid" style="margin-top: 2rem;">
                         <div class="pd-meta-item">
                             <span class="pd-meta-label">Manufacturer</span>
                             <span class="pd-meta-value">Amrut International, Surat</span>
