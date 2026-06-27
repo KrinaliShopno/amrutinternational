@@ -2,10 +2,29 @@
 <html lang="en">
 
 <head>
+    <title>Product Details - Amrut International</title>
+    <meta name="description" content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
+    <meta name="keywords" content="Ayurvedic product details, organic health benefits, chemical-free cosmetics, premium hygiene supplies">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://amrutinternational.com/product-detail.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Product Details - Amrut International">
+    <meta property="og:description" content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
+    <meta property="og:url" content="https://amrutinternational.com/product-detail.html">
+    <meta property="og:site_name" content="Amrut International">
+    <meta property="og:image" content="https://amrutinternational.com/assets/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Product Details - Amrut International">
+    <meta name="twitter:description" content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
+    <meta name="twitter:image" content="https://amrutinternational.com/assets/images/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - Amrut International</title>
-    <meta name="description" content="View detailed information about Amrut International's Ayurvedic, herbal and wellness products.">
+    
+    
     <!-- FontAwesome 6 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main Stylesheet -->
@@ -642,6 +661,10 @@
 
             // Update page title & breadcrumb
             document.title = `${product.title} - Amrut International`;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', `${product.title} - ${product.description.substring(0, 150)}...`);
+            }
             if (breadcrumbName) breadcrumbName.textContent = product.title.length > 40 ? product.title.substring(0, 40) + '...' : product.title;
 
             const tagHTML = product.tag ? `<span class="pd-tag">${product.tag}</span>` : '';

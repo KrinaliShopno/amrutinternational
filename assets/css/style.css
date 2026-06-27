@@ -284,7 +284,12 @@ select {
     padding: 15px 0;
     box-shadow: var(--shadow-md);
 }
-
+@media (max-width:425px) {
+    .header.sticky {
+    padding: 25px 0;
+    box-shadow: var(--shadow-md);
+}
+}
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -308,6 +313,12 @@ select {
 .logo img {
     height: 100px;
     width: auto;
+}
+@media (max-width:1024px) {
+    .logo img {
+    height: 80px;
+    width: auto;
+}
 }
 .nav {
     display: flex;
@@ -3216,7 +3227,7 @@ select {
         display: block;
         background: none;
         border: none;
-        font-size: 1.5rem;
+        font-size: 31px;
         color: var(--primary-color);
         cursor: pointer;
     }
