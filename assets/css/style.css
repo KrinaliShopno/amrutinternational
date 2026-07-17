@@ -1153,12 +1153,16 @@ select {
 }
 
 .product-buy-btn {
-    font-size: 0.85rem;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius-sm);
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    font-size: 17px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 /* ==========================================================================
@@ -1182,6 +1186,43 @@ select {
     background-size: cover;
     background-position: center;
 }
+@media (max-width:1024px) {
+.comfort-section-bg {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 40%;
+    height: 60%;
+    /* opacity: 0.15; */
+    background-size: cover;
+    background-position: center;
+}
+}
+@media (max-width:768px) {
+.comfort-section-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 30%;
+    /* opacity: 0.15; */
+    background-size: cover;
+    background-position: center;
+}
+}
+@media (max-width:425px) {
+    .comfort-section-bg {
+    position: absolute;
+    top: 75%;
+    left: 54%;
+    width: 53%;
+    height: 25%;
+    /* opacity: 0.15; */
+    background-size: cover;
+    background-position: center;
+}
+}
+
 
 .comfort-grid {
     display: grid;
@@ -1304,11 +1345,13 @@ select {
     font-weight: 600;
     color: var(--primary-color);
     font-size: 0.95rem;
+    margin: 0px;
 }
 
 .review-author-role {
     font-size: 0.75rem;
     color: var(--text-muted);
+    margin: 0px;
 }
 
 /* ==========================================================================

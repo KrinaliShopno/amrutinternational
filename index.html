@@ -445,7 +445,7 @@
                         <span class="product-category">Herbal Cosmetics</span>
                         <h3 class="product-title">Onion Hair Shampoo Sulphate & Paraben Free - 300ml</h3>
                         <div class="product-card-footer">
-                            <span class="product-price">₹399.00</span>
+                            <!-- <span class="product-price">₹399.00</span> -->
                             <button class="btn btn-primary product-buy-btn buy-now"
                                 data-title="Onion Hair Shampoo Sulphate & Paraben Free- 300ml"><i
                                     class="fa-brands fa-whatsapp"></i> Inquire</button>
@@ -475,7 +475,7 @@
                         <span class="product-category">Herbal Cosmetics</span>
                         <h3 class="product-title">Rutucharya Onion Hair Oil Multi-Purpose Growth - 100ml</h3>
                         <div class="product-card-footer">
-                            <span class="product-price">₹299.00</span>
+                            <!-- <span class="product-price">₹299.00</span> -->
                             <button class="btn btn-primary product-buy-btn buy-now"
                                 data-title="Rutucharya Onion Hair Oil Multi-Purpose Growth-100ml"><i
                                     class="fa-brands fa-whatsapp"></i> Inquire</button>
@@ -505,7 +505,7 @@
                         <span class="product-category">Herbal Cosmetics</span>
                         <h3 class="product-title">Protect & Repair Keratin Smoothing Shampoo - 250ml</h3>
                         <div class="product-card-footer">
-                            <span class="product-price">₹450.00</span>
+                            <!-- <span class="product-price">₹450.00</span> -->
                             <button class="btn btn-primary product-buy-btn buy-now"
                                 data-title="Protect & Repair Keratin Smoothing Shampoo-250ml"><i
                                     class="fa-brands fa-whatsapp"></i> Inquire</button>
@@ -535,7 +535,7 @@
                         <span class="product-category">Herbal Cosmetics</span>
                         <h3 class="product-title">Keratin Conditioner with Keratin Proteins & Argan - 250ml</h3>
                         <div class="product-card-footer">
-                            <span class="product-price">₹490.00</span>
+                            <!-- <span class="product-price">₹490.00</span> -->
                             <button class="btn btn-primary product-buy-btn buy-now"
                                 data-title="Keratin Conditioner With Keratin Proteins & Argan Oil-250ml"><i
                                     class="fa-brands fa-whatsapp"></i> Inquire</button>
@@ -815,69 +815,151 @@
                 <p>Read what our business partners and retail consumers say about our formulations.</p>
             </div>
 
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"Amrut International's private label cosmetic service is phenomenal. We
-                        launched our brand's onion shampoo range, and our customers absolutely love the quality and GMP
-                        compliance."</p>
-                    <div class="review-author">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
-                            alt="Client 1" class="review-author-img">
-                        <div>
-                            <h4 class="review-author-name">Maria Christina</h4>
-                            <p class="review-author-role">Brand Product Manager</p>
+            <style>
+                .reviews-carousel-wrapper {
+                    position: relative;
+                    overflow: hidden;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding-bottom: 1rem;
+                }
+                .reviews-grid {
+                    display: flex;
+                    transition: transform 0.5s ease;
+                    flex-wrap: nowrap;
+                    /* Removing default CSS grid styles if any */
+                    gap: 2rem;
+                }
+                .reviews-grid .review-card {
+                    flex: 0 0 calc(33.333% - 1.33rem);
+                    display: flex;
+                    flex-direction: column;
+                }
+                .reviews-grid .review-card .review-author {
+                    margin-top: auto;
+                }
+                @media (max-width: 992px) {
+                    .reviews-grid .review-card {
+                        flex: 0 0 calc(50% - 1rem);
+                    }
+                }
+                @media (max-width: 768px) {
+                    .reviews-grid .review-card {
+                        flex: 0 0 100%;
+                    }
+                }
+                .reviews-dots {
+                    margin-top: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.6rem;
+                }
+                .r-dot {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 2px solid var(--primary-color);
+                    background: transparent;
+                    cursor: pointer;
+                    transition: var(--transition-fast);
+                }
+                .r-dot.active {
+                    background: var(--primary-color);
+                    transform: scale(1.1);
+                }
+            </style>
+            
+            <div class="reviews-carousel-wrapper">
+                <div class="reviews-grid" id="reviews-slider">
+                    
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--primary-dark); font-size: 1.15rem;">feeling happy with you</h4>
+                        <p class="review-text">"had a wonderful time with this products. I am extremely pleased with the results of amrut international."</p>
+                        <div class="review-author">
+                            <img src="https://ui-avatars.com/api/?name=Karish&background=random&rounded=true"
+                                alt="Karish" class="review-author-img">
+                            <div>
+                                <h4 class="review-author-name">Karish</h4>
+                                <p class="review-author-role">Ux Designer</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="review-card">
-                    <div class="review-stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="review-text">"The Anion sanitary napkins have revolutionized our hygiene distribution
-                        channel. High quality layers, leak-free design, and competitive wholesale pricing for export."
-                    </p>
-                    <div class="review-author">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100"
-                            alt="Client 2" class="review-author-img">
-                        <div>
-                            <h4 class="review-author-name">Kate Platonova</h4>
-                            <p class="review-author-role">Hygiene Co-Founder</p>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--primary-dark); font-size: 1.15rem;">Amazing Hair Care Treatment</h4>
+                        <p class="review-text">"Amrut International's private label cosmetic service is phenomenal. We
+                            launched our brand's onion shampoo range, and our customers absolutely love the quality and GMP
+                            compliance."</p>
+                        <div class="review-author">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
+                                alt="Client 1" class="review-author-img">
+                            <div>
+                                <h4 class="review-author-name">Maria Christina</h4>
+                                <p class="review-author-role">Brand Product Manager</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="review-card">
-                    <div class="review-stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--primary-dark); font-size: 1.15rem;">Gratitude with us</h4>
+                        <p class="review-text">"The Anion sanitary napkins have revolutionized our hygiene distribution
+                            channel. High quality layers, leak-free design, and competitive wholesale pricing for export."
+                        </p>
+                        <div class="review-author">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100"
+                                alt="Client 2" class="review-author-img">
+                            <div>
+                                <h4 class="review-author-name">Kate Platonova</h4>
+                                <p class="review-author-role">Hygiene Co-Founder</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="review-text">"Excellent water care systems. The Alkaline Water Ionizer machine works
-                        beautifully, maintaining precise pH values. Highly professional client dealing."</p>
-                    <div class="review-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
-                            alt="Client 3" class="review-author-img">
-                        <div>
-                            <h4 class="review-author-name">Juris Kleperis</h4>
-                            <p class="review-author-role">UX Architect / Client</p>
+
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--primary-dark); font-size: 1.15rem;">Thankful to you</h4>
+                        <p class="review-text">"Excellent water care systems. The Alkaline Water Ionizer machine works
+                            beautifully, maintaining precise pH values. Highly professional client dealing."</p>
+                        <div class="review-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                                alt="Client 3" class="review-author-img">
+                            <div>
+                                <h4 class="review-author-name">Juris Kleperis</h4>
+                                <p class="review-author-role">UX Architect / Client</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="reviews-dots" id="reviews-dots"></div>
         </div>
     </section>
 
@@ -946,7 +1028,6 @@
             </div>
         </div>
     </section>
-
     <!-- ==========================================
          FOOTER SECTION
          ========================================== -->
@@ -1176,6 +1257,80 @@
                 
                 // Wait slightly for layout initialization
                 setTimeout(updateSlider, 200);
+            }
+
+            // ==========================================
+            // REVIEWS CAROUSEL
+            // ==========================================
+            const reviewsSlider = document.getElementById('reviews-slider');
+            const reviewsDotsContainer = document.getElementById('reviews-dots');
+            
+            if (reviewsSlider && reviewsDotsContainer) {
+                let currentReviewIndex = 0;
+                const reviewCards = reviewsSlider.querySelectorAll('.review-card');
+                const totalReviews = reviewCards.length;
+                
+                function getVisibleReviews() {
+                    const width = window.innerWidth;
+                    if (width > 992) return 3;
+                    if (width > 768) return 2;
+                    return 1;
+                }
+                
+                function updateReviewsSlider() {
+                    const visible = getVisibleReviews();
+                    const maxIndex = Math.max(0, totalReviews - visible);
+                    
+                    if (currentReviewIndex > maxIndex) currentReviewIndex = maxIndex;
+                    if (currentReviewIndex < 0) currentReviewIndex = 0;
+                    
+                    if (reviewCards.length > 0) {
+                        const cardWidth = reviewCards[0].getBoundingClientRect().width;
+                        const computedGap = parseFloat(window.getComputedStyle(reviewsSlider).gap) || 32;
+                        const offset = currentReviewIndex * (cardWidth + computedGap);
+                        reviewsSlider.style.transform = `translateX(-${offset}px)`;
+                    }
+                    
+                    // Update Dots
+                    reviewsDotsContainer.innerHTML = '';
+                    for (let i = 0; i <= maxIndex; i++) {
+                        const dot = document.createElement('span');
+                        dot.className = `r-dot ${i === currentReviewIndex ? 'active' : ''}`;
+                        dot.addEventListener('click', () => {
+                            currentReviewIndex = i;
+                            updateReviewsSlider();
+                        });
+                        reviewsDotsContainer.appendChild(dot);
+                    }
+                }
+                
+                // Touch Swipe Support for Reviews
+                let rStartX = 0;
+                let rEndX = 0;
+
+                reviewsSlider.addEventListener('touchstart', (e) => {
+                    rStartX = e.touches[0].clientX;
+                }, { passive: true });
+
+                reviewsSlider.addEventListener('touchend', (e) => {
+                    rEndX = e.changedTouches[0].clientX;
+                    const threshold = 50;
+                    const diff = rStartX - rEndX;
+
+                    const visible = getVisibleReviews();
+                    const maxIndex = Math.max(0, totalReviews - visible);
+
+                    if (diff > threshold && currentReviewIndex < maxIndex) {
+                        currentReviewIndex++;
+                        updateReviewsSlider();
+                    } else if (diff < -threshold && currentReviewIndex > 0) {
+                        currentReviewIndex--;
+                        updateReviewsSlider();
+                    }
+                }, { passive: true });
+
+                window.addEventListener('resize', updateReviewsSlider);
+                setTimeout(updateReviewsSlider, 200);
             }
 
             // ==========================================
