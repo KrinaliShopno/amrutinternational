@@ -3,14 +3,17 @@
 
 <head>
     <title>Product Details - Amrut International</title>
-    <meta name="description" content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
-    <meta name="keywords" content="Ayurvedic product details, organic health benefits, chemical-free cosmetics, premium hygiene supplies">
+    <meta name="description"
+        content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
+    <meta name="keywords"
+        content="Ayurvedic product details, organic health benefits, chemical-free cosmetics, premium hygiene supplies">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://amrutinternational.com/product-detail.html">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Product Details - Amrut International">
-    <meta property="og:description" content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
+    <meta property="og:description"
+        content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
     <meta property="og:url" content="https://amrutinternational.com/product-detail.html">
     <meta property="og:site_name" content="Amrut International">
     <meta property="og:image" content="https://amrutinternational.com/assets/images/logo.png">
@@ -19,11 +22,16 @@
     <meta property="og:image:type" content="image/png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Product Details - Amrut International">
-    <meta name="twitter:description" content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
+    <meta name="twitter:description"
+        content="View detailed specifications, benefits, packaging sizes, and wholesale pricing for Amrut International's organic wellness formulations, cosmetics, and hygiene range.">
     <meta name="twitter:image" content="https://amrutinternational.com/assets/images/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Standard Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
 
+<!-- Apple Touch Icon (iOS માટે) -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
     <!-- FontAwesome 6 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main Stylesheet -->
@@ -47,13 +55,26 @@
             margin-bottom: 2.5rem;
             flex-wrap: wrap;
         }
+
         .pd-breadcrumb a {
             color: var(--primary-color);
             transition: opacity 0.2s;
         }
-        .pd-breadcrumb a:hover { opacity: 0.7; text-decoration: underline; }
-        .pd-breadcrumb i { font-size: 0.65rem; color: var(--border-color); }
-        .pd-breadcrumb span { color: var(--text-color); font-weight: 500; }
+
+        .pd-breadcrumb a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        .pd-breadcrumb i {
+            font-size: 0.65rem;
+            color: var(--border-color);
+        }
+
+        .pd-breadcrumb span {
+            color: var(--text-color);
+            font-weight: 500;
+        }
 
         /* Layout */
         .pd-layout {
@@ -79,15 +100,16 @@
             min-height: 380px;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(46,82,74,0.08);
-            box-shadow: 0 8px 30px rgba(46,82,74,0.1);
+            border: 1px solid rgba(46, 82, 74, 0.08);
+            box-shadow: 0 8px 30px rgba(46, 82, 74, 0.1);
+            cursor: zoom-in;
         }
 
         .pd-main-img {
             max-height: 320px;
             max-width: 100%;
             object-fit: contain;
-            transition: opacity 0.4s ease, transform 0.4s ease;
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .pd-hover-thumb-row {
@@ -109,10 +131,13 @@
             overflow: hidden;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-        .pd-thumb:hover, .pd-thumb.active {
+
+        .pd-thumb:hover,
+        .pd-thumb.active {
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(46,82,74,0.12);
+            box-shadow: 0 0 0 3px rgba(46, 82, 74, 0.12);
         }
+
         .pd-thumb img {
             width: 100%;
             height: 100%;
@@ -127,7 +152,7 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            background: rgba(46,82,74,0.08);
+            background: rgba(46, 82, 74, 0.08);
             color: var(--primary-color);
             font-size: 0.72rem;
             font-weight: 700;
@@ -183,8 +208,8 @@
             background: white;
             border-radius: 12px;
             padding: 1.25rem 1.5rem;
-            border: 1px solid rgba(46,82,74,0.08);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            border: 1px solid rgba(46, 82, 74, 0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
 
         .pd-meta-item {
@@ -228,12 +253,12 @@
         }
 
         .related-heading p {
-            color: rgba(255,255,255,0.7) !important;
+            color: rgba(255, 255, 255, 0.7) !important;
             font-size: 0.9rem;
         }
 
         .related-heading .blog-tag-line {
-            color: rgba(255,255,255,0.8) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
         }
 
         .related-grid {
@@ -298,12 +323,12 @@
             align-items: center;
             gap: 1.25rem;
             background: #ffffff;
-            border: 1px solid rgba(46,82,74,0.12);
+            border: 1px solid rgba(46, 82, 74, 0.12);
             border-radius: 16px;
             padding: 1.25rem;
             margin-bottom: 1.25rem;
             max-width: 480px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
         }
 
         .whatsapp-card-icon {
@@ -359,13 +384,13 @@
             transition: all 0.2s ease;
             border: 1px solid #20ba5a;
             width: fit-content;
-            box-shadow: 0 4px 10px rgba(37,211,102,0.15);
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.15);
         }
 
         .whatsapp-card-btn:hover {
             background: #20ba5a;
             transform: translateY(-1px);
-            box-shadow: 0 6px 15px rgba(37,211,102,0.25);
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.25);
         }
 
         .whatsapp-card-note {
@@ -379,24 +404,43 @@
         .product-detail-block {
             display: none;
         }
+
         .product-detail-block.active {
             display: contents;
         }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .related-grid { grid-template-columns: repeat(3, 1fr); }
+            .related-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
+
         @media (max-width: 900px) {
-            .pd-layout { grid-template-columns: 1fr; gap: 2rem; }
-            .pd-gallery { position: static; }
+            .pd-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .pd-gallery {
+                position: static;
+            }
         }
+
         @media (max-width: 700px) {
-            .related-grid { grid-template-columns: repeat(2, 1fr); }
-            .pd-meta-grid { grid-template-columns: 1fr; }
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pd-meta-grid {
+                grid-template-columns: 1fr;
+            }
         }
+
         @media (max-width: 480px) {
-            .related-grid { grid-template-columns: 1fr; }
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -410,10 +454,12 @@
         <div class="container">
             <div class="top-bar-left">
                 <a href="tel:+919879063240" class="top-bar-item"><i class="fa-solid fa-phone"></i> +91 98790 63240</a>
-                <a href="mailto:amrutinternational2017@gmail.com" class="top-bar-item"><i class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</a>
+                <a href="mailto:amrutinternational2017@gmail.com" class="top-bar-item"><i
+                        class="fa-solid fa-envelope"></i> amrutinternational2017@gmail.com</a>
             </div>
             <div class="top-bar-right">
-                <a href="https://maps.google.com/?q=Surat,+Gujarat,+India" target="_blank" class="top-bar-item"><i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</a>
+                <a href="https://maps.google.com/?q=Surat,+Gujarat,+India" target="_blank" class="top-bar-item"><i
+                        class="fa-solid fa-location-dot"></i> Surat, Gujarat, India</a>
             </div>
         </div>
     </div>
@@ -430,7 +476,8 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Our Company <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i></a>
+                        <a href="#" class="nav-link">Our Company <i class="fa-solid fa-chevron-down"
+                                style="font-size:0.75rem;"></i></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item"><a href="about-us.html">About Us</a></li>
                             <li class="dropdown-item"><a href="our-history.html">Our History</a></li>
@@ -477,13 +524,14 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=600"
-                                 alt="100% Organic Moringa Oleifera Leaf Powder"
-                                 class="pd-main-img" id="main-img-1"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Moringa+Powder'">
+                                alt="100% Organic Moringa Oleifera Leaf Powder" class="pd-main-img" id="main-img-1"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Moringa+Powder'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=600','main-img-1',this)">
-                                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=600','main-img-1',this)">
+                                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
@@ -491,7 +539,10 @@
                     <div class="pd-info">
                         <h1 class="pd-title">100% Organic Moringa Oleifera Leaf Powder</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Organic Moringa Oleifera Leaf Powder is derived from the dried leaves of the drumstick tree. It is rich in essential vitamins, minerals, antioxidants, and amino acids. A perfect daily dietary supplement to boost energy levels, improve immune support, and detoxify the body naturally.</p>
+                        <p class="pd-description">Organic Moringa Oleifera Leaf Powder is derived from the dried leaves
+                            of the drumstick tree. It is rich in essential vitamins, minerals, antioxidants, and amino
+                            acids. A perfect daily dietary supplement to boost energy levels, improve immune support,
+                            and detoxify the body naturally.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -499,32 +550,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20100%25%20Organic%20Moringa%20Oleifera%20Leaf%20Powder.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20100%25%20Organic%20Moringa%20Oleifera%20Leaf%20Powder.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20100%25%20Organic%20Moringa%20Oleifera%20Leaf%20Powder.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20100%25%20Organic%20Moringa%20Oleifera%20Leaf%20Powder.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Health &amp; Nutraceutical</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Health &amp; Nutraceutical</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -534,20 +598,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600"
-                                 alt="Organic Moringa Oleifera Capsule"
-                                 class="pd-main-img" id="main-img-2"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Moringa+Capsule'">
+                                alt="Organic Moringa Oleifera Capsule" class="pd-main-img" id="main-img-2"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Moringa+Capsule'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600','main-img-2',this)">
-                                <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600','main-img-2',this)">
+                                <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Organic Moringa Oleifera Capsule - 60 Caps</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">High-potency organic moringa leaves packed into easy-to-consume vegetable capsules. Contains 60 capsules per bottle. Supports joint health, digestion, cardiovascular health, and acts as a powerful source of natural calcium and iron.</p>
+                        <p class="pd-description">High-potency organic moringa leaves packed into easy-to-consume
+                            vegetable capsules. Contains 60 capsules per bottle. Supports joint health, digestion,
+                            cardiovascular health, and acts as a powerful source of natural calcium and iron.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -555,32 +622,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Organic%20Moringa%20Oleifera%20Capsule%20-%2060%20Caps.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Organic%20Moringa%20Oleifera%20Capsule%20-%2060%20Caps.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Organic%20Moringa%20Oleifera%20Capsule%20-%2060%20Caps.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Organic%20Moringa%20Oleifera%20Capsule%20-%2060%20Caps.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Health &amp; Nutraceutical</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Health &amp; Nutraceutical</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -589,21 +669,23 @@
                 <div class="product-detail-block" data-product-id="3" data-category="health">
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
-                            <img src="https://images.unsplash.com/photo-1611070973770-b1a672610042?auto=format&fit=crop&q=80&w=600"
-                                 alt="Pure Tulsi Drops"
-                                 class="pd-main-img" id="main-img-3"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Tulsi+Drops'">
+                            <img src="https://placehold.co/400x400/2e524a/ffffff?text=Tulsi+Drops"
+                                alt="Pure Tulsi Drops" class="pd-main-img" id="main-img-3"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Tulsi+Drops'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1611070973770-b1a672610042?auto=format&fit=crop&q=80&w=600','main-img-3',this)">
-                                <img src="https://images.unsplash.com/photo-1611070973770-b1a672610042?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://placehold.co/400x400/2e524a/ffffff?text=Tulsi+Drops','main-img-3',this)">
+                                <img src="https://placehold.co/400x400/2e524a/ffffff?text=Tulsi+Drops" alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Pure Tulsi Drops - Immunity Booster</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">A natural blend of five species of holy basil (Tulsi) extracts. Known for its strong anti-microbial, anti-inflammatory, and immune-strengthening benefits. Just 2-3 drops in water daily helps detoxify and fight off common coughs and cold.</p>
+                        <p class="pd-description">A natural blend of five species of holy basil (Tulsi) extracts. Known
+                            for its strong anti-microbial, anti-inflammatory, and immune-strengthening benefits. Just
+                            2-3 drops in water daily helps detoxify and fight off common coughs and cold.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -611,32 +693,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Pure%20Tulsi%20Drops%20-%20Immunity%20Booster.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Pure%20Tulsi%20Drops%20-%20Immunity%20Booster.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Pure%20Tulsi%20Drops%20-%20Immunity%20Booster.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Pure%20Tulsi%20Drops%20-%20Immunity%20Booster.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Health &amp; Nutraceutical</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Health &amp; Nutraceutical</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -646,20 +741,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600"
-                                 alt="USA Formulated Whey Protein"
-                                 class="pd-main-img" id="main-img-4"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Whey+Protein'">
+                                alt="USA Formulated Whey Protein" class="pd-main-img" id="main-img-4"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Whey+Protein'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600','main-img-4',this)">
-                                <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600','main-img-4',this)">
+                                <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">USA Formulated Whey Protein</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Premium quality whey protein concentrate &amp; isolate blend. Formulated in the USA to boost athletic performance, testosterone, and speed up muscle recovery. Rich in BCAA and essential amino acids. Sulphate &amp; Gluten free.</p>
+                        <p class="pd-description">Premium quality whey protein concentrate &amp; isolate blend.
+                            Formulated in the USA to boost athletic performance, testosterone, and speed up muscle
+                            recovery. Rich in BCAA and essential amino acids. Sulphate &amp; Gluten free.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -667,32 +765,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20USA%20Formulated%20Whey%20Protein.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20USA%20Formulated%20Whey%20Protein.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20USA%20Formulated%20Whey%20Protein.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20USA%20Formulated%20Whey%20Protein.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Health &amp; Nutraceutical</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Health &amp; Nutraceutical</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -701,24 +812,29 @@
                 <div class="product-detail-block" data-product-id="5" data-category="cosmetics">
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
-                            <img src="assets/images/product_onion_shampoo_render.png"
-                                 alt="Onion Hair Shampoo"
-                                 class="pd-main-img" id="main-img-5"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Onion+Shampoo'">
+                            <img src="assets/images/product_onion_shampoo_render.png" alt="Onion Hair Shampoo"
+                                class="pd-main-img" id="main-img-5"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Onion+Shampoo'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('assets/images/product_onion_shampoo_render.png','main-img-5',this)">
-                                <img src="assets/images/product_onion_shampoo_render.png" alt="View 1" onerror="this.parentElement.style.display='none'">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('assets/images/product_onion_shampoo_render.png','main-img-5',this)">
+                                <img src="assets/images/product_onion_shampoo_render.png" alt="View 1"
+                                    onerror="this.parentElement.style.display='none'">
                             </div>
-                            <div class="pd-thumb" onclick="swapImage('assets/images/product_onion_shampoo.png','main-img-5',this)">
-                                <img src="assets/images/product_onion_shampoo.png" alt="View 2" onerror="this.parentElement.style.display='none'">
+                            <div class="pd-thumb"
+                                onclick="swapImage('assets/images/product_onion_shampoo.png','main-img-5',this)">
+                                <img src="assets/images/product_onion_shampoo.png" alt="View 2"
+                                    onerror="this.parentElement.style.display='none'">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Onion Hair Shampoo Sulphate &amp; Paraben Free - 300ml</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Infused with Red Onion Extract, Black Seed Oil, and Vitamin E. Gently cleanses hair and scalp without drying, helps strengthen hair follicles, reduces hair fall, and encourages healthy growth. Free from harsh sulphates, parabens, and mineral oils.</p>
+                        <p class="pd-description">Infused with Red Onion Extract, Black Seed Oil, and Vitamin E. Gently
+                            cleanses hair and scalp without drying, helps strengthen hair follicles, reduces hair fall,
+                            and encourages healthy growth. Free from harsh sulphates, parabens, and mineral oils.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -726,32 +842,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Onion%20Hair%20Shampoo%20Sulphate%20%26%20Paraben%20Free%20-%20300ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Onion%20Hair%20Shampoo%20Sulphate%20%26%20Paraben%20Free%20-%20300ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Onion%20Hair%20Shampoo%20Sulphate%20%26%20Paraben%20Free%20-%20300ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Onion%20Hair%20Shampoo%20Sulphate%20%26%20Paraben%20Free%20-%20300ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Herbal Cosmetics</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Herbal Cosmetics</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -760,24 +889,29 @@
                 <div class="product-detail-block" data-product-id="6" data-category="cosmetics">
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
-                            <img src="assets/images/product_onion_oil_render.png"
-                                 alt="Rutucharya Onion Hair Oil"
-                                 class="pd-main-img" id="main-img-6"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Onion+Hair+Oil'">
+                            <img src="assets/images/product_onion_oil_render.png" alt="Rutucharya Onion Hair Oil"
+                                class="pd-main-img" id="main-img-6"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Onion+Hair+Oil'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('assets/images/product_onion_oil_render.png','main-img-6',this)">
-                                <img src="assets/images/product_onion_oil_render.png" alt="View 1" onerror="this.parentElement.style.display='none'">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('assets/images/product_onion_oil_render.png','main-img-6',this)">
+                                <img src="assets/images/product_onion_oil_render.png" alt="View 1"
+                                    onerror="this.parentElement.style.display='none'">
                             </div>
-                            <div class="pd-thumb" onclick="swapImage('assets/images/red_onion_oil.png','main-img-6',this)">
-                                <img src="assets/images/red_onion_oil.png" alt="View 2" onerror="this.parentElement.style.display='none'">
+                            <div class="pd-thumb"
+                                onclick="swapImage('assets/images/red_onion_oil.png','main-img-6',this)">
+                                <img src="assets/images/red_onion_oil.png" alt="View 2"
+                                    onerror="this.parentElement.style.display='none'">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Rutucharya Onion Hair Oil Multi-Purpose Growth - 100ml</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">A nourishing blend of Red Onion oil, Almond oil, Castor oil, Jojoba oil, and Coconut oil. Provides deep conditioning, reduces hair thinning, controls dandruff, and restores silky luster and volume to dry, damaged hair.</p>
+                        <p class="pd-description">A nourishing blend of Red Onion oil, Almond oil, Castor oil, Jojoba
+                            oil, and Coconut oil. Provides deep conditioning, reduces hair thinning, controls dandruff,
+                            and restores silky luster and volume to dry, damaged hair.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -785,32 +919,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Rutucharya%20Onion%20Hair%20Oil%20Multi-Purpose%20Growth%20-%20100ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Rutucharya%20Onion%20Hair%20Oil%20Multi-Purpose%20Growth%20-%20100ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Rutucharya%20Onion%20Hair%20Oil%20Multi-Purpose%20Growth%20-%20100ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Rutucharya%20Onion%20Hair%20Oil%20Multi-Purpose%20Growth%20-%20100ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Herbal Cosmetics</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Herbal Cosmetics</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -819,21 +966,24 @@
                 <div class="product-detail-block" data-product-id="7" data-category="cosmetics">
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
-                            <img src="assets/images/product_keratin_shampoo_render.png"
-                                 alt="Keratin Smoothing Shampoo"
-                                 class="pd-main-img" id="main-img-7"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Keratin+Shampoo'">
+                            <img src="assets/images/product_keratin_shampoo_render.png" alt="Keratin Smoothing Shampoo"
+                                class="pd-main-img" id="main-img-7"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Keratin+Shampoo'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('assets/images/product_keratin_shampoo_render.png','main-img-7',this)">
-                                <img src="assets/images/product_keratin_shampoo_render.png" alt="View 1" onerror="this.parentElement.style.display='none'">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('assets/images/product_keratin_shampoo_render.png','main-img-7',this)">
+                                <img src="assets/images/product_keratin_shampoo_render.png" alt="View 1"
+                                    onerror="this.parentElement.style.display='none'">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Protect &amp; Repair Keratin Smoothing Shampoo - 250ml</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Formulated with Hydrolyzed Keratin and nourishing oils to repair colored or heat-styled hair. Smoothens dry hair cuticles, locks in moisture, and eliminates frizz, leaving your hair looking naturally straight and shiny.</p>
+                        <p class="pd-description">Formulated with Hydrolyzed Keratin and nourishing oils to repair
+                            colored or heat-styled hair. Smoothens dry hair cuticles, locks in moisture, and eliminates
+                            frizz, leaving your hair looking naturally straight and shiny.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -841,32 +991,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Protect%20%26%20Repair%20Keratin%20Smoothing%20Shampoo%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Protect%20%26%20Repair%20Keratin%20Smoothing%20Shampoo%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Protect%20%26%20Repair%20Keratin%20Smoothing%20Shampoo%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Protect%20%26%20Repair%20Keratin%20Smoothing%20Shampoo%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Herbal Cosmetics</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Herbal Cosmetics</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -875,21 +1038,24 @@
                 <div class="product-detail-block" data-product-id="8" data-category="cosmetics">
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
-                            <img src="assets/images/product_keratin_conditioner_render.png"
-                                 alt="Keratin Conditioner"
-                                 class="pd-main-img" id="main-img-8"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Keratin+Conditioner'">
+                            <img src="assets/images/product_keratin_conditioner_render.png" alt="Keratin Conditioner"
+                                class="pd-main-img" id="main-img-8"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Keratin+Conditioner'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('assets/images/product_keratin_conditioner_render.png','main-img-8',this)">
-                                <img src="assets/images/product_keratin_conditioner_render.png" alt="View 1" onerror="this.parentElement.style.display='none'">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('assets/images/product_keratin_conditioner_render.png','main-img-8',this)">
+                                <img src="assets/images/product_keratin_conditioner_render.png" alt="View 1"
+                                    onerror="this.parentElement.style.display='none'">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Keratin Conditioner with Keratin Proteins &amp; Argan Oil - 250ml</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Enriched with Morocco Argan Oil and Keratin proteins. Provides intense moisture therapy to dry, lifeless hair. Detangles, reduces hair breakage, and keeps locks smooth and bouncy all day long.</p>
+                        <p class="pd-description">Enriched with Morocco Argan Oil and Keratin proteins. Provides intense
+                            moisture therapy to dry, lifeless hair. Detangles, reduces hair breakage, and keeps locks
+                            smooth and bouncy all day long.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -897,32 +1063,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Keratin%20Conditioner%20with%20Keratin%20Proteins%20%26%20Argan%20Oil%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Keratin%20Conditioner%20with%20Keratin%20Proteins%20%26%20Argan%20Oil%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Keratin%20Conditioner%20with%20Keratin%20Proteins%20%26%20Argan%20Oil%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Keratin%20Conditioner%20with%20Keratin%20Proteins%20%26%20Argan%20Oil%20-%20250ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Herbal Cosmetics</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Herbal Cosmetics</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -932,20 +1111,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600"
-                                 alt="Advanced Hair Growth Serum"
-                                 class="pd-main-img" id="main-img-9"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Hair+Growth+Serum'">
+                                alt="Advanced Hair Growth Serum" class="pd-main-img" id="main-img-9"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Hair+Growth+Serum'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600','main-img-9',this)">
-                                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600','main-img-9',this)">
+                                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Advanced Hair Growth Serum - 50ml</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Lightweight, non-sticky hair vitalizer serum. Infused with Redensyl, Ginseng, and Onion stem cells. Re-activates hair stem cells to encourage denser, thicker hair growth while controlling split ends.</p>
+                        <p class="pd-description">Lightweight, non-sticky hair vitalizer serum. Infused with Redensyl,
+                            Ginseng, and Onion stem cells. Re-activates hair stem cells to encourage denser, thicker
+                            hair growth while controlling split ends.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -953,32 +1135,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hair%20Growth%20Serum%20-%2050ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hair%20Growth%20Serum%20-%2050ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hair%20Growth%20Serum%20-%2050ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hair%20Growth%20Serum%20-%2050ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Herbal Cosmetics</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Herbal Cosmetics</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -988,20 +1183,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1626015713026-d837d172406f?auto=format&fit=crop&q=80&w=600"
-                                 alt="Mooch Beard & Hair Growth Natural Oil"
-                                 class="pd-main-img" id="main-img-10"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Beard+Oil'">
+                                alt="Mooch Beard & Hair Growth Natural Oil" class="pd-main-img" id="main-img-10"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Beard+Oil'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1626015713026-d837d172406f?auto=format&fit=crop&q=80&w=600','main-img-10',this)">
-                                <img src="https://images.unsplash.com/photo-1626015713026-d837d172406f?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1626015713026-d837d172406f?auto=format&fit=crop&q=80&w=600','main-img-10',this)">
+                                <img src="https://images.unsplash.com/photo-1626015713026-d837d172406f?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Mooch Beard &amp; Hair Growth Natural Oil - 30ml</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Specially formulated for facial hair. A rich blend of Argan, Jojoba, and Cedarwood oils that nourishes beard roots, prevents beard-ruff, and promotes even, patchy-free beard growth.</p>
+                        <p class="pd-description">Specially formulated for facial hair. A rich blend of Argan, Jojoba,
+                            and Cedarwood oils that nourishes beard roots, prevents beard-ruff, and promotes even,
+                            patchy-free beard growth.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -1009,32 +1207,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Mooch%20Beard%20%26%20Hair%20Growth%20Natural%20Oil%20-%2030ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Mooch%20Beard%20%26%20Hair%20Growth%20Natural%20Oil%20-%2030ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Mooch%20Beard%20%26%20Hair%20Growth%20Natural%20Oil%20-%2030ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Mooch%20Beard%20%26%20Hair%20Growth%20Natural%20Oil%20-%2030ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Herbal Cosmetics</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Herbal Cosmetics</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -1044,20 +1255,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1607006342411-b013522e2947?auto=format&fit=crop&q=80&w=600"
-                                 alt="Lemongrass Refreshing Soap"
-                                 class="pd-main-img" id="main-img-11"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Lemongrass+Soap'">
+                                alt="Lemongrass Refreshing Soap" class="pd-main-img" id="main-img-11"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Lemongrass+Soap'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1607006342411-b013522e2947?auto=format&fit=crop&q=80&w=600','main-img-11',this)">
-                                <img src="https://images.unsplash.com/photo-1607006342411-b013522e2947?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1607006342411-b013522e2947?auto=format&fit=crop&q=80&w=600','main-img-11',this)">
+                                <img src="https://images.unsplash.com/photo-1607006342411-b013522e2947?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Lemongrass Refreshing Soap - 125g</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Handcrafted natural herbal soap made with Pure Lemongrass Essential Oil. Cleanses away dirt and impurities, acts as an antiseptic, and refreshes body and mind with its uplifting citrus aroma.</p>
+                        <p class="pd-description">Handcrafted natural herbal soap made with Pure Lemongrass Essential
+                            Oil. Cleanses away dirt and impurities, acts as an antiseptic, and refreshes body and mind
+                            with its uplifting citrus aroma.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -1065,32 +1279,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Lemongrass%20Refreshing%20Soap%20-%20125g.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Lemongrass%20Refreshing%20Soap%20-%20125g.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Lemongrass%20Refreshing%20Soap%20-%20125g.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Lemongrass%20Refreshing%20Soap%20-%20125g.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Herbal Cosmetics</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Herbal Cosmetics</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -1100,20 +1327,24 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600"
-                                 alt="Premium Sanitary Napkins Regular"
-                                 class="pd-main-img" id="main-img-12"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Sanitary+Pad+Regular'">
+                                alt="Premium Sanitary Napkins Regular" class="pd-main-img" id="main-img-12"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Sanitary+Pad+Regular'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600','main-img-12',this)">
-                                <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600','main-img-12',this)">
+                                <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Premium Sanitary Napkins with Anion Chip (Regular - 240mm)</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Features a patent Anion chip that provides antibacterial protection, odor control, and reduces menstrual discomfort. Made with premium, ultra-soft cotton surface, breathable bottom layer, and super absorbent polymers that keep you dry for up to 8 hours.</p>
+                        <p class="pd-description">Features a patent Anion chip that provides antibacterial protection,
+                            odor control, and reduces menstrual discomfort. Made with premium, ultra-soft cotton
+                            surface, breathable bottom layer, and super absorbent polymers that keep you dry for up to 8
+                            hours.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -1121,32 +1352,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Regular%20-%20240mm).%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Regular%20-%20240mm).%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Regular%20-%20240mm).%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Regular%20-%20240mm).%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Sanitary Pads</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Sanitary Pads</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -1156,20 +1400,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600"
-                                 alt="Premium Sanitary Napkins Large"
-                                 class="pd-main-img" id="main-img-13"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Sanitary+Pad+Large'">
+                                alt="Premium Sanitary Napkins Large" class="pd-main-img" id="main-img-13"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Sanitary+Pad+Large'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600','main-img-13',this)">
-                                <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600','main-img-13',this)">
+                                <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Premium Sanitary Napkins with Anion Chip (Large - 280mm)</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Extra protection for heavy flow days. Includes an anion chip that prevents bacterial multiplication, controls rashes, and relieves irritation. Ultra-thin structure with side wings for leakage protection.</p>
+                        <p class="pd-description">Extra protection for heavy flow days. Includes an anion chip that
+                            prevents bacterial multiplication, controls rashes, and relieves irritation. Ultra-thin
+                            structure with side wings for leakage protection.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -1177,32 +1424,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Large%20-%20280mm).%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Large%20-%20280mm).%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Large%20-%20280mm).%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%20Sanitary%20Napkins%20with%20Anion%20Chip%20(Large%20-%20280mm).%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Sanitary Pads</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Sanitary Pads</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -1212,20 +1472,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600"
-                                 alt="Advanced Hand Sanitizer Gel"
-                                 class="pd-main-img" id="main-img-14"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Hand+Sanitizer'">
+                                alt="Advanced Hand Sanitizer Gel" class="pd-main-img" id="main-img-14"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Hand+Sanitizer'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600','main-img-14',this)">
-                                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600','main-img-14',this)">
+                                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Advanced Hand Sanitizer Gel - 500ml</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Kills 99.9% germs instantly without water. Contains 75% Iso-Propyl alcohol, enriched with organic Aloe Vera extracts and Vitamin E to prevent skin dryness. Ideal for clinical and household hygiene.</p>
+                        <p class="pd-description">Kills 99.9% germs instantly without water. Contains 75% Iso-Propyl
+                            alcohol, enriched with organic Aloe Vera extracts and Vitamin E to prevent skin dryness.
+                            Ideal for clinical and household hygiene.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -1233,32 +1496,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hand%20Sanitizer%20Gel%20-%20500ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hand%20Sanitizer%20Gel%20-%20500ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hand%20Sanitizer%20Gel%20-%20500ml.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Advanced%20Hand%20Sanitizer%20Gel%20-%20500ml.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Surgical Products</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Surgical Products</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -1268,20 +1544,23 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600"
-                                 alt="Premium 3-Ply Disposable Surgical Face Masks"
-                                 class="pd-main-img" id="main-img-15"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Face+Masks'">
+                                alt="Premium 3-Ply Disposable Surgical Face Masks" class="pd-main-img" id="main-img-15"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Face+Masks'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600','main-img-15',this)">
-                                <img src="https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600','main-img-15',this)">
+                                <img src="https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Premium 3-Ply Disposable Surgical Face Masks - 50 Pcs</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">High-filtration disposable masks with melt-blown filter layers. Offers excellent barrier protection against droplets, dust, and pollen. Fitted with comfortable soft ear loops and nose clip.</p>
+                        <p class="pd-description">High-filtration disposable masks with melt-blown filter layers. Offers
+                            excellent barrier protection against droplets, dust, and pollen. Fitted with comfortable
+                            soft ear loops and nose clip.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -1289,32 +1568,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%203-Ply%20Disposable%20Surgical%20Face%20Masks%20-%2050%20Pcs.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%203-Ply%20Disposable%20Surgical%20Face%20Masks%20-%2050%20Pcs.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%203-Ply%20Disposable%20Surgical%20Face%20Masks%20-%2050%20Pcs.%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Premium%203-Ply%20Disposable%20Surgical%20Face%20Masks%20-%2050%20Pcs.%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Surgical Products</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Surgical Products</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -1324,20 +1616,24 @@
                     <div class="pd-gallery">
                         <div class="pd-main-image-box">
                             <img src="https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600"
-                                 alt="Amrut-jal Alkaline Water Ionizer"
-                                 class="pd-main-img" id="main-img-16"
-                                 onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Water+Ionizer'">
+                                alt="Amrut-jal Alkaline Water Ionizer" class="pd-main-img" id="main-img-16"
+                                onerror="this.src='https://placehold.co/400x400/2e524a/ffffff?text=Water+Ionizer'">
                         </div>
                         <div class="pd-hover-thumb-row">
-                            <div class="pd-thumb active" onclick="swapImage('https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600','main-img-16',this)">
-                                <img src="https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600" alt="View 1">
+                            <div class="pd-thumb active"
+                                onclick="swapImage('https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600','main-img-16',this)">
+                                <img src="https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600"
+                                    alt="View 1">
                             </div>
                         </div>
                     </div>
                     <div class="pd-info">
                         <h1 class="pd-title">Amrut-jal Alkaline Water Ionizer (11-Plates)</h1>
                         <div class="pd-availability-badge">Instock</div>
-                        <p class="pd-description">Premium state-of-the-art water ionizer machine equipped with 11 high-grade Platinum-coated Titanium plates. Features touch control panel, automatic cleaning cycle, and produces ionized alkaline water (pH 3.5 to 11.5) rich in antioxidants (Molecular Hydrogen) to neutralize acidic wastes in the body.</p>
+                        <p class="pd-description">Premium state-of-the-art water ionizer machine equipped with 11
+                            high-grade Platinum-coated Titanium plates. Features touch control panel, automatic cleaning
+                            cycle, and produces ionized alkaline water (pH 3.5 to 11.5) rich in antioxidants (Molecular
+                            Hydrogen) to neutralize acidic wastes in the body.</p>
                         <div class="whatsapp-inquiry-card">
                             <div class="whatsapp-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div class="whatsapp-card-content">
@@ -1345,32 +1641,45 @@
                                     <span class="whatsapp-card-name">Amrut International (India)</span>
                                     <span class="whatsapp-card-badge">Online</span>
                                 </div>
-                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Amrut-jal%20Alkaline%20Water%20Ionizer%20(11-Plates).%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn">
+                                <a href="https://wa.me/919924231091?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Amrut-jal%20Alkaline%20Water%20Ionizer%20(11-Plates).%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn">
                                     <i class="fa-brands fa-whatsapp"></i> Need help? Chat via WhatsApp
                                 </a>
                                 <div class="whatsapp-card-note">Call for bulk query</div>
                             </div>
                         </div>
                         <div class="whatsapp-inquiry-card" style="background:#25d366;border-color:#20ba5a;color:#fff;">
-                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="whatsapp-card-icon" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i>
+                            </div>
                             <div class="whatsapp-card-content">
                                 <div class="whatsapp-card-header">
-                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International (Online)</span>
-                                    <span class="whatsapp-card-badge" style="background:#fff;color:#25d366;">Online</span>
+                                    <span class="whatsapp-card-name" style="color:#fff;">Amrut International
+                                        (Online)</span>
+                                    <span class="whatsapp-card-badge"
+                                        style="background:#fff;color:#25d366;">Online</span>
                                 </div>
-                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Amrut-jal%20Alkaline%20Water%20Ionizer%20(11-Plates).%20Please%20share%20more%20details.%20Thank%20you!" target="_blank" class="whatsapp-card-btn" style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
-                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via WhatsApp
+                                <a href="https://wa.me/919879063240?text=Hello%20Amrut%20International%2C%20I%20would%20like%20to%20inquire%20about%3A%20Amrut-jal%20Alkaline%20Water%20Ionizer%20(11-Plates).%20Please%20share%20more%20details.%20Thank%20you!"
+                                    target="_blank" class="whatsapp-card-btn"
+                                    style="background:#fff;color:#25d366;border-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                                    <i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> Need help? Chat via
+                                    WhatsApp
                                 </a>
                             </div>
                         </div>
                         <div class="pd-divider"></div>
                         <div class="pd-meta-grid">
-                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span class="pd-meta-value">Amrut International, Surat</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span class="pd-meta-value">Water Care</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span class="pd-meta-value">Export &amp; Wholesale</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span class="pd-meta-value">India (GMP Certified)</span></div>
-                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span class="pd-meta-value">Contact for MOQ</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Manufacturer</span><span
+                                    class="pd-meta-value">Amrut International, Surat</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Category</span><span
+                                    class="pd-meta-value">Water Care</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Availability</span><span
+                                    class="pd-meta-value" style="color:#2e7d32;">In Stock</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Supply Type</span><span
+                                    class="pd-meta-value">Export &amp; Wholesale</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Origin</span><span
+                                    class="pd-meta-value">India (GMP Certified)</span></div>
+                            <div class="pd-meta-item"><span class="pd-meta-label">Min. Order</span><span
+                                    class="pd-meta-value">Contact for MOQ</span></div>
                         </div>
                     </div>
                 </div>
@@ -1378,10 +1687,12 @@
                 <!-- NOT FOUND STATE -->
                 <div class="product-detail-block" data-product-id="not-found" style="grid-column:1/-1;">
                     <div class="pd-not-found" style="text-align:center;padding:6rem 2rem;color:var(--text-muted);">
-                        <i class="fa-solid fa-box-open" style="font-size:3rem;margin-bottom:1rem;color:var(--border-color);display:block;"></i>
+                        <i class="fa-solid fa-box-open"
+                            style="font-size:3rem;margin-bottom:1rem;color:var(--border-color);display:block;"></i>
                         <h2 style="margin-bottom:1rem;color:var(--primary-color);">Product Not Found</h2>
                         <p>The product you're looking for doesn't exist or may have been removed.</p>
-                        <a href="products.html" class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.5rem;">
+                        <a href="products.html" class="btn btn-primary"
+                            style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.5rem;">
                             <i class="fa-solid fa-arrow-left"></i> Back to Products
                         </a>
                     </div>
@@ -1404,21 +1715,36 @@
                 <p>Explore more products from the same category</p>
             </div>
             <div class="related-grid">
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=1'" style="cursor:pointer;">
+                <!-- <div class="product-card" onclick="window.location.href='product-detail.html?id=1'" style="cursor:pointer;">
                     <div class="product-image-container"><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Moringa Powder"></div>
                     <div class="product-info"><h3 class="product-title">100% Organic Moringa Oleifera Leaf Powder</h3></div>
+                </div> -->
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=2'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://placehold.co/400x400/2e524a/ffffff?text=Tulsi+Drops" class="product-image"
+                            alt="Moringa Capsule"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Organic Moringa Oleifera Capsule - 60 Caps</h3>
+                    </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=2'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Moringa Capsule"></div>
-                    <div class="product-info"><h3 class="product-title">Organic Moringa Oleifera Capsule - 60 Caps</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=3'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://placehold.co/400x400/2e524a/ffffff?text=Tulsi+Drops" class="product-image"
+                            alt="Tulsi Drops"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pure Tulsi Drops - Immunity Booster</h3>
+                    </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=3'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1611070973770-b1a672610042?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Tulsi Drops"></div>
-                    <div class="product-info"><h3 class="product-title">Pure Tulsi Drops - Immunity Booster</h3></div>
-                </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=4'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Whey Protein"></div>
-                    <div class="product-info"><h3 class="product-title">USA Formulated Whey Protein</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=4'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&q=80&w=600"
+                            class="product-image" alt="Whey Protein"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">USA Formulated Whey Protein</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1433,21 +1759,41 @@
                 <p>Explore more products from the same category</p>
             </div>
             <div class="related-grid">
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=5'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="assets/images/product_onion_shampoo_render.png" class="product-image" alt="Onion Shampoo" onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Onion+Shampoo'"></div>
-                    <div class="product-info"><h3 class="product-title">Onion Hair Shampoo Sulphate &amp; Paraben Free - 300ml</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=5'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img src="assets/images/product_onion_shampoo_render.png"
+                            class="product-image" alt="Onion Shampoo"
+                            onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Onion+Shampoo'"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Onion Hair Shampoo Sulphate &amp; Paraben Free - 300ml</h3>
+                    </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=6'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="assets/images/product_onion_oil_render.png" class="product-image" alt="Onion Hair Oil" onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Onion+Oil'"></div>
-                    <div class="product-info"><h3 class="product-title">Rutucharya Onion Hair Oil Multi-Purpose Growth - 100ml</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=6'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img src="assets/images/product_onion_oil_render.png"
+                            class="product-image" alt="Onion Hair Oil"
+                            onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Onion+Oil'"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Rutucharya Onion Hair Oil Multi-Purpose Growth - 100ml</h3>
+                    </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=7'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="assets/images/product_keratin_shampoo_render.png" class="product-image" alt="Keratin Shampoo" onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Keratin+Shampoo'"></div>
-                    <div class="product-info"><h3 class="product-title">Protect &amp; Repair Keratin Smoothing Shampoo - 250ml</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=7'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img src="assets/images/product_keratin_shampoo_render.png"
+                            class="product-image" alt="Keratin Shampoo"
+                            onerror="this.src='https://placehold.co/300x300/2e524a/ffffff?text=Keratin+Shampoo'"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Protect &amp; Repair Keratin Smoothing Shampoo - 250ml</h3>
+                    </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=9'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Hair Growth Serum"></div>
-                    <div class="product-info"><h3 class="product-title">Advanced Hair Growth Serum - 50ml</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=9'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600"
+                            class="product-image" alt="Hair Growth Serum"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Advanced Hair Growth Serum - 50ml</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1462,13 +1808,23 @@
                 <p>Explore more products from the same category</p>
             </div>
             <div class="related-grid">
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=12'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Sanitary Pad Regular"></div>
-                    <div class="product-info"><h3 class="product-title">Premium Sanitary Napkins with Anion Chip (Regular - 240mm)</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=12'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600"
+                            class="product-image" alt="Sanitary Pad Regular"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Sanitary Napkins with Anion Chip (Regular - 240mm)</h3>
+                    </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=13'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Sanitary Pad Large"></div>
-                    <div class="product-info"><h3 class="product-title">Premium Sanitary Napkins with Anion Chip (Large - 280mm)</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=13'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=600"
+                            class="product-image" alt="Sanitary Pad Large"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Sanitary Napkins with Anion Chip (Large - 280mm)</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1483,13 +1839,23 @@
                 <p>Explore more products from the same category</p>
             </div>
             <div class="related-grid">
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=14'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Hand Sanitizer"></div>
-                    <div class="product-info"><h3 class="product-title">Advanced Hand Sanitizer Gel - 500ml</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=14'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600"
+                            class="product-image" alt="Hand Sanitizer"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Advanced Hand Sanitizer Gel - 500ml</h3>
+                    </div>
                 </div>
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=15'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Face Masks"></div>
-                    <div class="product-info"><h3 class="product-title">Premium 3-Ply Disposable Surgical Face Masks - 50 Pcs</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=15'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://images.unsplash.com/photo-1586942593568-29361efcd571?auto=format&fit=crop&q=80&w=600"
+                            class="product-image" alt="Face Masks"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium 3-Ply Disposable Surgical Face Masks - 50 Pcs</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1504,9 +1870,14 @@
                 <p>Explore more products from the same category</p>
             </div>
             <div class="related-grid">
-                <div class="product-card" onclick="window.location.href='product-detail.html?id=16'" style="cursor:pointer;">
-                    <div class="product-image-container"><img src="https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600" class="product-image" alt="Water Ionizer"></div>
-                    <div class="product-info"><h3 class="product-title">Amrut-jal Alkaline Water Ionizer (11-Plates)</h3></div>
+                <div class="product-card" onclick="window.location.href='product-detail.html?id=16'"
+                    style="cursor:pointer;">
+                    <div class="product-image-container"><img
+                            src="https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&q=80&w=600"
+                            class="product-image" alt="Water Ionizer"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Amrut-jal Alkaline Water Ionizer (11-Plates)</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1517,9 +1888,14 @@
          ========================================== -->
     <footer class="footer">
         <div class="footer-wave-wrapper">
-            <svg class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="wave-bg" d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="rgba(46, 82, 74, 0.15)"></path>
-                <path class="wave-fg" d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,42.7C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#1e3d36"></path>
+            <svg class="footer-wave" viewBox="0 0 1440 100" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="wave-bg"
+                    d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,42.7C960,43,1056,53,1152,58.7C1248,64,1344,64,1392,64L1440,64L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"
+                    fill="rgba(46, 82, 74, 0.15)"></path>
+                <path class="wave-fg"
+                    d="M0,64L48,64C96,64,192,64,288,58.7C384,53,480,43,576,42.7C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"
+                    fill="#1e3d36"></path>
             </svg>
         </div>
         <div class="footer-particles">
@@ -1555,28 +1931,37 @@
                     <div class="footer-logo">
                         <img src="assets/images/logo.png" alt="Amrut International Logo">
                     </div>
-                    <p class="footer-desc">Amrut International is a world renowned product, Supplier &amp; Exporter of Ayurveda product, Beauty &amp; Hygiene Product and related herbal preparations.</p>
+                    <p class="footer-desc">Amrut International is a world renowned product, Supplier &amp; Exporter of
+                        Ayurveda product, Beauty &amp; Hygiene Product and related herbal preparations.</p>
                     <div class="footer-certifications">
                         <img src="assets/images/certifications.png" alt="Compliance Certifications">
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>SIGN UP AND SAVE</h3>
-                    <p class="subscribe-text">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
-                    <form class="subscribe-form" onsubmit="alert('Thank you for subscribing!'); this.reset(); return false;">
+                    <p class="subscribe-text">Subscribe to get special offers, free giveaways, and once-in-a-lifetime
+                        deals.</p>
+                    <form class="subscribe-form"
+                        onsubmit="alert('Thank you for subscribing!'); this.reset(); return false;">
                         <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="subscribe-btn" aria-label="Subscribe"><i class="fa-regular fa-paper-plane"></i></button>
+                        <button type="submit" class="subscribe-btn" aria-label="Subscribe"><i
+                                class="fa-regular fa-paper-plane"></i></button>
                     </form>
                     <div class="footer-socials">
-                        <a href="https://www.facebook.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/" target="_blank" class="footer-social-icon"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-social-icon"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer-social-icon"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer-social-icon"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer-social-icon"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Amrut International Copyright &copy; 2024, Design By <a href="https://shopnoecommerce.com/" target="_blank" class="shopno-link">SHOPNO ECOMMERCE PVT LTD</a></p>
+                <p>Amrut International Copyright &copy; 2024, Design By <a href="https://shopnoecommerce.com/"
+                        target="_blank" class="shopno-link">SHOPNO ECOMMERCE PVT LTD</a></p>
             </div>
         </div>
     </footer>
@@ -1598,14 +1983,20 @@
                 <a href="https://wa.me/919924231091" target="_blank" class="whatsapp-agent-card">
                     <div class="whatsapp-agent-info">
                         <div class="whatsapp-agent-avatar">TS</div>
-                        <div class="whatsapp-agent-details"><h4>Team Sales</h4><p>Domestic Inquiries</p></div>
+                        <div class="whatsapp-agent-details">
+                            <h4>Team Sales</h4>
+                            <p>Domestic Inquiries</p>
+                        </div>
                     </div>
                     <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
                 </a>
                 <a href="https://wa.me/919879063240" target="_blank" class="whatsapp-agent-card">
                     <div class="whatsapp-agent-info">
                         <div class="whatsapp-agent-avatar">EH</div>
-                        <div class="whatsapp-agent-details"><h4>Export Head</h4><p>International Business</p></div>
+                        <div class="whatsapp-agent-details">
+                            <h4>Export Head</h4>
+                            <p>International Business</p>
+                        </div>
                     </div>
                     <div class="whatsapp-agent-link"><i class="fa-solid fa-paper-plane"></i></div>
                 </a>
@@ -1691,7 +2082,55 @@
             }
             thumbEl.classList.add('active');
         }
+
+        // Setup Image Zoom Effect
+        document.querySelectorAll('.pd-main-image-box').forEach(box => {
+            box.addEventListener('mousemove', function(e) {
+                const rect = box.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+                const img = box.querySelector('.pd-main-img');
+                if(img) {
+                    img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                    img.style.transform = 'scale(2.2)';
+                }
+            });
+            box.addEventListener('mouseleave', function() {
+                const img = box.querySelector('.pd-main-img');
+                if(img) {
+                    img.style.transformOrigin = 'center';
+                    img.style.transform = 'scale(1)';
+                }
+            });
+        });
+
+        // Add 3 Placeholder Related Images to all products
+        document.querySelectorAll('.pd-hover-thumb-row').forEach((row) => {
+            const numMissing = 4 - row.children.length;
+            if (numMissing > 0) {
+                const mainImg = row.previousElementSibling.querySelector('.pd-main-img');
+                if(!mainImg) return;
+                const mainImgId = mainImg.id;
+                
+                const dummies = [
+                    'https://placehold.co/400x400/2e524a/ffffff?text=Onion+Hair+Oil',
+                    'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80&w=600'
+                ];
+                
+                for(let i=0; i < numMissing; i++) {
+                    const imgSrc = dummies[i % dummies.length];
+                    const newThumb = document.createElement('div');
+                    newThumb.className = 'pd-thumb';
+                    newThumb.onclick = function() { swapImage(imgSrc, mainImgId, this); };
+                    newThumb.innerHTML = `<img src="${imgSrc}" alt="Related View">`;
+                    row.appendChild(newThumb);
+                }
+            }
+        });
     </script>
 
 </body>
+
 </html>

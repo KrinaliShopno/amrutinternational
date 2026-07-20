@@ -1816,7 +1816,7 @@ select {
 .certificate-icon {
     background-color: var(--primary-light);
     color: var(--primary-color);
-    padding: 3rem 2rem;
+    /* padding: 3rem 2rem; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4387,7 +4387,7 @@ select {
 }
 
 .vision-image {
-    background-image: url('../images/amrutvison.jpeg');
+    background-image: url('../images/amrut-vision.png');
     background-size: cover;
     background-position: center;
     min-height: 100%;
