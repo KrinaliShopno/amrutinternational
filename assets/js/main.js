@@ -21,16 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentPath) {
         currentPath = currentPath.split('?')[0].split('#')[0];
     }
-    if (!currentPath || currentPath === '') {
-        currentPath = 'index.html';
+    
+    // Normalize to handle urls without .html
+    let normalizedPath = currentPath.replace('.html', '');
+    if (!normalizedPath || normalizedPath === '' || normalizedPath === 'index') {
+        normalizedPath = 'index';
     }
     
     // Normalize detail pages to their main categories
-    let targetPath = currentPath;
-    if (currentPath.startsWith('blog-detail-')) {
-        targetPath = 'blog.html';
-    } else if (currentPath === 'product-detail.html') {
-        targetPath = 'products.html';
+    let targetPath = normalizedPath;
+    if (normalizedPath.startsWith('blog-detail-')) {
+        targetPath = 'blog';
+    } else if (normalizedPath === 'product-detail') {
+        targetPath = 'products';
     }
     
     // Clear all active classes first
@@ -38,14 +41,20 @@ document.addEventListener('DOMContentLoaded', function() {
         item.classList.remove('active');
     });
     
-    // Find matching link
+    // Find matching link function
+    function checkLinkMatch(link) {
+        const href = link.getAttribute('href');
+        if (!href || href === '#') return false;
+        const normalizedHref = href.split('/').pop().split('?')[0].split('#')[0].replace('.html', '');
+        return normalizedHref === targetPath;
+    }
+    
     let matched = false;
     
     // Check dropdown items first (dropdown links are inside dropdown-menu)
     const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
     dropdownLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href === targetPath) {
+        if (checkLinkMatch(link)) {
             const parentNavItem = link.closest('.nav-item');
             if (parentNavItem) {
                 parentNavItem.classList.add('active');
@@ -58,8 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!matched) {
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href === targetPath) {
+            if (checkLinkMatch(link)) {
                 const parentNavItem = link.closest('.nav-item');
                 if (parentNavItem) {
                     parentNavItem.classList.add('active');

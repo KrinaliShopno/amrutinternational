@@ -340,6 +340,7 @@ select {
 }
 
 .nav-link {
+    position: relative;
     font-weight: 500;
     color: #050b09;
     padding: 0.5rem 0;
@@ -357,7 +358,7 @@ select {
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 20px;
+    bottom: -4px;
     left: 0;
     width: 0;
     height: 2px;
